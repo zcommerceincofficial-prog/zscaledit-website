@@ -211,12 +211,19 @@ button { font-family: inherit; cursor: pointer; }
   padding: 156px 0 96px;
   overflow: hidden;
 }
+.hero > .container { position: relative; z-index: 1; }
 .hero__glow {
   position: absolute; inset: 0; pointer-events: none;
   background:
     radial-gradient(ellipse 80% 60% at 50% -5%, rgba(139,92,246,0.22) 0%, transparent 65%),
     radial-gradient(circle at 15% 85%, rgba(139,92,246,0.05) 0%, transparent 50%),
     radial-gradient(circle at 85% 20%, rgba(109,40,217,0.05) 0%, transparent 50%);
+}
+.hero__beams {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  width: 100%; height: 100%;
+  filter: blur(15px);
+  opacity: 0.85;
 }
 .hero__label { margin-bottom: 28px; }
 .hero h1 {
@@ -755,4 +762,36 @@ button { font-family: inherit; cursor: pointer; }
 @media (max-width: 480px) {
   .container { padding: 0 16px; }
   .stats-row { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ── Client logo marquee (pure CSS, GPU-accelerated) ── */
+.logo-marquee {
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #fff 8%, #fff 92%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #fff 8%, #fff 92%, transparent);
+}
+.logo-marquee__track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  gap: 64px;
+  animation: logo-scroll 28s linear infinite;
+  will-change: transform;
+}
+.logo-marquee__track img {
+  height: 56px;
+  width: auto;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+@keyframes logo-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .logo-marquee__track { animation: none; }
+}
+@media (max-width: 480px) {
+  .logo-marquee__track { gap: 40px; animation-duration: 20s; }
+  .logo-marquee__track img { height: 40px; }
 }
