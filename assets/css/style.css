@@ -166,6 +166,25 @@ body::after {
 .stone-graph__line { stroke: var(--panel-accent); stroke-width: 2; stroke-dasharray: 4 6; }
 .stone-graph__arrow { fill: var(--panel-accent); }
 @media (max-width: 640px) { .stone-graph-bg svg { opacity: 0.32; } }
+
+/* Interactive layer: tilt-toward-cursor + click/tap spin, playful and bouncy */
+.stone-graph__tilt {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.stone-graph__tilt.is-spinning {
+  animation: stone-spin 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: none;
+}
+@keyframes stone-spin {
+  from { transform: rotate(0deg) scale(1); }
+  60%  { transform: rotate(320deg) scale(1.15); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+@media (prefers-reduced-motion: reduce), (hover: none) and (pointer: coarse) {
+  .stone-graph__tilt { transition: none; }
+}
 @media (prefers-reduced-motion: reduce) {
   .stone-graph__stone, .stone-graph__line, .stone-graph__arrow {
     transition-duration: 0.01s !important; transition-delay: 0s !important;
