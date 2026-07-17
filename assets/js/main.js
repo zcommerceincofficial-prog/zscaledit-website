@@ -1,36 +1,28 @@
 /* ZScaledIt — main.js */
 
-// Nav scroll effect
-const nav = document.getElementById('nav');
-if (nav) {
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 20);
-  }, { passive: true });
-}
+// Mobile rail panel
+const topToggle = document.getElementById('railToggle');
+const railPanel = document.getElementById('railPanel');
+const railClose = document.getElementById('railClose');
 
-// Mobile nav
-const toggle = document.getElementById('navToggle');
-const mobileNav = document.getElementById('mobileNav');
-const mobileClose = document.getElementById('mobileClose');
-
-function openNav() {
-  mobileNav.classList.add('open');
+function openRail() {
+  railPanel.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
-function closeNav() {
-  mobileNav.classList.remove('open');
+function closeRail() {
+  railPanel.classList.remove('open');
   document.body.style.overflow = '';
 }
 
-if (toggle) toggle.addEventListener('click', openNav);
-if (mobileClose) mobileClose.addEventListener('click', closeNav);
-if (mobileNav) {
-  mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+if (topToggle) topToggle.addEventListener('click', openRail);
+if (railClose) railClose.addEventListener('click', closeRail);
+if (railPanel) {
+  railPanel.querySelectorAll('a').forEach(a => a.addEventListener('click', closeRail));
 }
 
-// Mark active nav link
+// Mark active nav link (rail + mobile panel)
 const path = window.location.pathname.split('/').pop() || 'index.html';
-document.querySelectorAll('.nav__links a').forEach(a => {
+document.querySelectorAll('.rail__nav a, .rail__mobile-panel a').forEach(a => {
   const href = a.getAttribute('href');
   if (href === path || (path === '' && href === 'index.html')) {
     a.classList.add('active');
@@ -43,9 +35,9 @@ const fadeObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.08 });
 document.querySelectorAll('.fade').forEach(el => fadeObserver.observe(el));
 
-// Animated number counters
+// Animated number counters (rail ticker + any [data-n] element)
 function countUp(el, target, suffix) {
-  const dur = 1400;
+  const dur = 1100;
   const start = performance.now();
   const update = (now) => {
     const p = Math.min((now - start) / dur, 1);

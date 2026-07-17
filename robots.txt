@@ -19,4 +19,4 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
-Sitemap: https://www.zscaledit.com/sitemap.xml
+Sitemap: https://www.zscaledit.site/sitemap.xml

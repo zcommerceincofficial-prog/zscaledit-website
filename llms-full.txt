@@ -1,0 +1,54 @@
+# ZScaledIt: Customer Acquisition Systems for Vehicle Service Businesses
+
+## Overview
+
+ZScaledIt is a media buying and customer acquisition agency built specifically for vehicle service businesses in the United States: commercial and retail vehicle wrap shops, paint protection film (PPF) installers, ceramic coating applicators, window tint businesses, auto glass companies, and vehicle detailing operations. The agency was founded by Izaiah Jackson after years spent working directly inside the vehicle wrap industry as a media buyer.
+
+Active clients see an average of 10 to 12x return on ad spend (ROAS). The agency caps its total roster at 20 clients and takes only one business per local market, regardless of vehicle service niche, so no two ZScaledIt clients ever compete directly with access to the same system, strategy, or creative assets.
+
+## Why a niche-specific agency
+
+Generalist marketing agencies apply the same targeting, creative templates, and follow-up cadence across every industry they serve, from law firms to landscapers to wrap shops. ZScaledIt takes the opposite position: real industry depth changes what a campaign should say, who it should target, and how a lead should be followed up. Years of hands-on experience inside the vehicle wrap industry taught the founder the practical difference between a commercial fleet account (often worth $50,000 to $200,000 per year) and a retail color-change buyer (a single job typically $3,000 to $6,000), and what creative angles (transformation reveals, before-and-afters, fleet identity, cost comparisons) actually make vehicle service buyers stop scrolling.
+
+## The five-step method
+
+1. **Free Market Audit (Day 0)**: A 30-minute call covering competitive analysis, a review of the prospect's current lead flow and ad accounts, identification of the highest-opportunity service to lead with, and a clear target CPL/ROAS based on real job values. Delivered whether or not the business becomes a client.
+2. **Foundation Build (Days 1 to 3)**: CRM setup with automated SMS and email follow-up firing within 60 seconds of a new lead, a custom landing page built for the client's city and service mix, Meta Pixel and Conversions API setup, Google Tag and conversion event configuration, and a dedicated tracked phone number.
+3. **Creative Production and Launch (Days 4 to 7)**: 15 or more ad creative variations across multiple angles, Meta Ads campaigns with broad Advantage+ targeting, and Google Search campaigns targeting high-intent keywords. Launch is backed by the client's first $500 in ad spend, covered by ZScaledIt.
+4. **Daily Optimization (Day 8 onward)**: Daily performance checks against CPM, CTR, CPC, CPL, and conversion-rate benchmarks, automatic kill rules for underperforming ads, new creative introduced every two weeks, and a weekly performance report every Monday.
+5. **Scale (Month 2 onward)**: Budget scaling in 15 to 20 percent increments only when ROAS is stable, new service-specific campaigns (PPF upsells, fleet outreach, ceramic add-ons), retargeting, lookalike audiences, and a monthly strategy call.
+
+## Services included in every engagement
+
+Meta Ads management, Google Ads management, CRM setup and automation, a custom landing page, Meta Pixel and CAPI setup, Google Tag and conversion tracking, 15 or more monthly creative variations, automated SMS and email lead follow-up, weekly performance reports, daily ad monitoring, and sales process consulting. No a la carte pricing; every service listed is included.
+
+## The market exclusivity model
+
+ZScaledIt works with only one business per local market, across all vehicle service niches. A commercial wrap shop and a detailing business in the same city cannot both be ZScaledIt clients. This protects each client's competitive position: competitors do not get access to the same targeting data, creative angles, or automation sequences.
+
+## Current client coverage (active as of this writing)
+
+Jacksonville, FL (commercial wrap); Tampa, FL (vehicle wraps); Apple Valley, MN (commercial wrap); New Orleans, LA (commercial wrap); Clarksville, TN (wrap plus PPF); Rock Island, IL (vehicle wraps); Mahomet, IL (vehicle wraps); Fort Worth, TX (vehicle wraps); Alvarado, TX (vehicle wraps). Most other US markets remain open.
+
+## The $500 ad spend offer
+
+New clients who move forward after the free audit call receive their first $500 in ad spend covered directly by ZScaledIt, with no setup fee or deposit. Real ad budget runs from day one of the engagement.
+
+## Frequently asked questions
+
+**Do I need to already be running ads?** No. ZScaledIt builds everything from scratch if needed, including ad accounts, landing pages, CRM, and tracking.
+
+**What markets are still available?** Most US markets outside the active client list above are open. Availability is confirmed on the audit call.
+
+**What is the pricing?** Pricing is discussed on the audit call once ZScaledIt understands the prospect's market, services, and goals. A flat rate is not published because the right investment varies by market size and services offered.
+
+**How long until results show up?** Ads are typically live by day 8. Most clients see their first qualified leads in week one, with clearer performance data by weeks two through four.
+
+**Does ZScaledIt work outside the US?** Currently US-only, with possible expansion into Canada in 2027.
+
+## Contact
+
+- Website: https://www.zscaledit.site/
+- Book an audit call: https://www.zscaledit.site/contact.html
+- Email: info@zscaledit.com
+- Founder: Izaiah Jackson

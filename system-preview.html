@@ -3,68 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Client System — ZScaledIt</title>
-  <meta name="description" content="A look at the client portal and follow-up system ZScaledIt clients get access to — estimates, CRM, pipeline tracking, ad account setup, and a built-in follow-up SOP.">
-  <link rel="canonical" href="https://www.zscaledit.com/system-preview.html">
+  <title>The Client System: ZScaledIt</title>
+  <meta name="description" content="A look at the client portal and follow-up system ZScaledIt clients get access to: estimates, CRM, pipeline tracking, ad account setup, and a built-in follow-up SOP.">
+  <link rel="canonical" href="https://www.zscaledit.site/system-preview.html">
+  <meta property="og:title" content="The Client System: ZScaledIt">
+  <meta property="og:description" content="A look at the client portal and follow-up system ZScaledIt clients get access to.">
+  <meta property="og:url" content="https://www.zscaledit.site/system-preview.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://www.zscaledit.site/assets/og-image.png">
+  <meta property="og:image:alt" content="ZScaledIt: customer acquisition systems for vehicle service businesses">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.zscaledit.site/assets/og-image.png">
+  <meta name="twitter:image:alt" content="ZScaledIt: customer acquisition systems for vehicle service businesses">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"></noscript>
-  <link rel="stylesheet" href="assets/css/style.css?v=20260628">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Public+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Public+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+  <link rel="stylesheet" href="assets/css/style.css?v=20260717">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <script type="application/ld+json">
+  { "@context": "https://schema.org","@type":"WebPage","@id":"https://www.zscaledit.site/system-preview.html#webpage",
+    "url":"https://www.zscaledit.site/system-preview.html","name":"The Client System: ZScaledIt",
+    "description":"A look at the client portal and follow-up system ZScaledIt clients get access to.",
+    "inLanguage":"en-US","isPartOf":{"@type":"WebSite","name":"ZScaledIt","url":"https://www.zscaledit.site/"},
+    "datePublished":"2026-06-19","dateModified":"2026-07-17",
+    "author":{"@type":"Person","name":"Izaiah Jackson","jobTitle":"Founder"},
+    "publisher":{"@type":"Organization","name":"ZScaledIt","url":"https://www.zscaledit.site/"} }
+  </script>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.zscaledit.site/"},
+    {"@type":"ListItem","position":2,"name":"The System","item":"https://www.zscaledit.site/system-preview.html"}]}
+  </script>
 </head>
 <body>
 
-<!-- NAV -->
-<nav class="nav" id="nav">
-  <div class="container nav__inner">
-    <a href="index.html" class="nav__logo">
-      <div class="nav__logo__mark">Z</div>
-      <span>ScaledIt</span>
-    </a>
-    <ul class="nav__links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="method.html">Method</a></li>
-      <li><a href="results.html">Results</a></li>
-      <li><a href="system-preview.html">The System</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="nav__actions">
-      <a href="contact.html" class="btn btn-primary">Book Growth Audit</a>
-      <button class="nav__toggle" id="navToggle" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
-</nav>
-<div class="nav__mobile" id="mobileNav">
-  <button class="nav__mobile-close" id="mobileClose" aria-label="Close">✕</button>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="method.html">Method</a>
-  <a href="results.html">Results</a>
-  <a href="system-preview.html">The System</a>
-  <a href="contact.html">Contact</a>
+<div class="topbar">
+  <a href="index.html" class="topbar__logo"><span>Z</span>ScaledIt</a>
+  <button class="topbar__toggle" id="railToggle" aria-label="Open menu"><span></span><span></span></button>
+</div>
+<div class="rail__mobile-panel" id="railPanel">
+  <button class="rail__mobile-panel-close" id="railClose" aria-label="Close" style="position:absolute; top:20px; right:20px; background:none; border:2px solid var(--paper-3); color:var(--paper-3); width:36px; height:36px; border-radius:3px;">&times;</button>
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="method.html">Method</a>
+  <a href="results.html">Results</a><a href="system-preview.html">The System</a><a href="contact.html">Contact</a>
   <a href="contact.html" class="btn btn-primary">Book Growth Audit</a>
 </div>
 
-<!-- PAGE HERO -->
+<aside class="rail">
+  <a href="index.html" class="rail__logo"><div class="rail__logo__mark">Z</div><span>ScaledIt</span></a>
+  <nav class="rail__nav">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="method.html">Method</a>
+    <a href="results.html">Results</a><a href="system-preview.html" class="active">The System</a><a href="contact.html">Contact</a>
+  </nav>
+  <div class="rail__ticker"><div class="rail__ticker__label">Avg. ROAS Delivered</div><div class="rail__ticker__num num" data-n="11" data-s="x">0x</div></div>
+  <a href="contact.html" class="btn btn-primary">Book Growth Audit</a>
+</aside>
+
+<div class="main">
+
 <section class="pg-hero">
-  <canvas class="hero__beams" id="heroBeams" aria-hidden="true"></canvas>
   <div class="container">
-    <div class="pill">The Client System</div>
-    <h1>This is what clients get<br><span class="gradient-text">the day they sign.</span></h1>
-    <p>Most agencies hand you a Slack channel and a Google Sheet. We hand you a real portal — built for your business, walking your team through estimates, CRM, pipeline, ad account access, and the follow-up rules that actually close jobs.</p>
+    <div class="tag-eyebrow">The Client System</div>
+    <h1>This is what clients get <span class="emph">the day they sign.</span></h1>
+    <p>Other agencies hand you a chat channel and a spreadsheet. ZScaledIt hands you a real portal, built for your business, walking your team through estimates, CRM, pipeline, ad account access, and the follow-up rules that actually close jobs.</p>
   </div>
 </section>
 
-<!-- WHAT'S INSIDE -->
 <section class="section">
   <div class="container">
     <div class="sh fade">
-      <div class="pill">What's Inside</div>
-      <h2>Five modules.<br><span class="gradient-text">One onboarding hub.</span></h2>
-      <p>Every client gets a private portal walking their team through the exact system running behind their account. Here's a peek — full access is client-only.</p>
+      <div class="tag-eyebrow">What's Inside</div>
+      <h2>Six modules. <span class="emph">One onboarding hub.</span></h2>
+      <p>Every client gets a private portal walking their team through the exact system running behind their account. Here is a peek. Full access is client-only.</p>
     </div>
     <div class="preview-grid fade">
       <div class="preview-card">
@@ -74,11 +87,11 @@
             <div class="mock-row"><span class="mock-dot mock-dot--pending"></span><span class="mock-line mock-line--md"></span><span class="mock-amt">$860</span></div>
             <div class="mock-row"><span class="mock-dot mock-dot--ok"></span><span class="mock-line mock-line--lg"></span><span class="mock-amt">$2,100</span></div>
           </div>
-          <div class="preview-card__lock"><div class="preview-card__badge"><span class="icon">🔒</span><span class="label">Client Only</span></div></div>
+          <div class="preview-card__lock"><div class="preview-card__badge"><span class="label">Client Only</span></div></div>
         </div>
         <div class="preview-card__body">
           <div class="preview-card__n">01</div>
-          <h4>Estimates & Invoices, Automated</h4>
+          <h4>Estimates and invoices, automated</h4>
           <p>How a new lead automatically moves from first contact to a sent estimate, and how invoicing fires the moment a job is marked done.</p>
         </div>
       </div>
@@ -88,12 +101,12 @@
             <div class="mock-card-row"><div class="mock-avatar"></div><div class="mock-stack"><span class="mock-line mock-line--md"></span><span class="mock-line mock-line--sm"></span></div><span class="mock-tag">Synced</span></div>
             <div class="mock-card-row"><div class="mock-avatar"></div><div class="mock-stack"><span class="mock-line mock-line--md"></span><span class="mock-line mock-line--sm"></span></div><span class="mock-tag">Synced</span></div>
           </div>
-          <div class="preview-card__lock"><div class="preview-card__badge"><span class="icon">🔒</span><span class="label">Client Only</span></div></div>
+          <div class="preview-card__lock"><div class="preview-card__badge"><span class="label">Client Only</span></div></div>
         </div>
         <div class="preview-card__body">
           <div class="preview-card__n">02</div>
-          <h4>CRM & Payment Integration</h4>
-          <p>How your CRM connects to your payment processor so payments sync straight to your pipeline — no double entry, no chasing invoices.</p>
+          <h4>CRM and payment integration</h4>
+          <p>How your CRM connects to your payment processor so payments sync straight to your pipeline. No double entry, no chasing invoices.</p>
         </div>
       </div>
       <div class="preview-card">
@@ -103,26 +116,26 @@
             <div class="mock-col"><span class="mock-col__h">Quoted</span><span class="mock-chip"></span></div>
             <div class="mock-col"><span class="mock-col__h">Won</span><span class="mock-chip mock-chip--won"></span></div>
           </div>
-          <div class="preview-card__lock"><div class="preview-card__badge"><span class="icon">🔒</span><span class="label">Client Only</span></div></div>
+          <div class="preview-card__lock"><div class="preview-card__badge"><span class="label">Client Only</span></div></div>
         </div>
         <div class="preview-card__body">
           <div class="preview-card__n">03</div>
-          <h4>Pipeline & Opportunity Tracking</h4>
-          <p>A live view of every lead and where it stands — no guessing, no digging through texts to find out what happened to a quote.</p>
+          <h4>Pipeline and opportunity tracking</h4>
+          <p>A live view of every lead and where it stands, so nobody has to dig through old texts to find out what happened to a quote.</p>
         </div>
       </div>
       <div class="preview-card">
         <div class="preview-card__thumb">
           <div class="preview-card__mock">
-            <div class="mock-perm-row"><span class="mock-logo mock-logo--meta">f</span><span class="mock-line mock-line--md"></span><span class="mock-check">✓</span></div>
-            <div class="mock-perm-row"><span class="mock-logo mock-logo--google">G</span><span class="mock-line mock-line--md"></span><span class="mock-check">✓</span></div>
+            <div class="mock-perm-row"><span class="mock-logo mock-logo--meta">f</span><span class="mock-line mock-line--md"></span><span class="mock-check">&check;</span></div>
+            <div class="mock-perm-row"><span class="mock-logo mock-logo--google">G</span><span class="mock-line mock-line--md"></span><span class="mock-check">&check;</span></div>
           </div>
-          <div class="preview-card__lock"><div class="preview-card__badge"><span class="icon">🔒</span><span class="label">Client Only</span></div></div>
+          <div class="preview-card__lock"><div class="preview-card__badge"><span class="label">Client Only</span></div></div>
         </div>
         <div class="preview-card__body">
           <div class="preview-card__n">04</div>
-          <h4>Ad Account Access, Simplified</h4>
-          <p>Step-by-step walkthroughs for granting Meta and Google Ads access — so we can launch and manage campaigns without back-and-forth.</p>
+          <h4>Ad account access, simplified</h4>
+          <p>Step-by-step walkthroughs for granting Meta and Google Ads access, so we can launch and manage campaigns without back and forth.</p>
         </div>
       </div>
       <div class="preview-card">
@@ -134,12 +147,12 @@
               <div class="mock-tl-item"><span class="mock-tl-dot mock-tl-dot--active"></span><span class="mock-line mock-line--lg"></span></div>
             </div>
           </div>
-          <div class="preview-card__lock"><div class="preview-card__badge"><span class="icon">🔒</span><span class="label">Client Only</span></div></div>
+          <div class="preview-card__lock"><div class="preview-card__badge"><span class="label">Client Only</span></div></div>
         </div>
         <div class="preview-card__body">
           <div class="preview-card__n">05</div>
-          <h4>The Follow-Up SOP</h4>
-          <p>The non-negotiable rules for working a lead from first contact to paid invoice — including the call cadence that gets through to people who never pick up cold calls.</p>
+          <h4>The follow-up SOP</h4>
+          <p>The non-negotiable rules for working a lead from first contact to paid invoice, including the call cadence that reaches people who never pick up cold calls.</p>
         </div>
       </div>
       <div class="preview-card">
@@ -149,12 +162,12 @@
             <div class="mock-stat"><span class="mock-stat__n">2.4x</span><span class="mock-line mock-line--sm"></span></div>
             <div class="mock-stat"><span class="mock-stat__n">72h</span><span class="mock-line mock-line--sm"></span></div>
           </div>
-          <div class="preview-card__lock"><div class="preview-card__badge"><span class="icon">🔒</span><span class="label">Client Only</span></div></div>
+          <div class="preview-card__lock"><div class="preview-card__badge"><span class="label">Client Only</span></div></div>
         </div>
         <div class="preview-card__body">
           <div class="preview-card__n">06</div>
-          <h4>What to Expect From Us</h4>
-          <p>Response times, reporting cadence, and exactly how we make scale-or-kill decisions on your ad spend — no surprises.</p>
+          <h4>What to expect from us</h4>
+          <p>Response times, reporting cadence, and exactly how we make scale-or-kill decisions on your ad spend. No surprises.</p>
         </div>
       </div>
     </div>
@@ -163,68 +176,62 @@
 
 <div class="divider"></div>
 
-<!-- FINAL CTA -->
 <section class="section section--alt">
   <div class="container">
     <div class="cta-block fade">
-      <div class="cta-offer">🎯 First $500 in ad spend — on us</div>
-      <h2>Want your team running on this system?</h2>
-      <p>Book a free competitor analysis and growth audit. If your market is open, we'll show you exactly what it looks like running for your business.</p>
+      <div class="cta-offer">First $500 in ad spend, on us</div>
+      <h2>Get your team running on this system.</h2>
+      <p>Book a free competitor analysis and growth audit. If your market is open, we will show you exactly what it looks like running for your business.</p>
       <a href="contact.html" class="btn btn-primary btn-lg">Book a Competitor Analysis + Growth Audit</a>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="footer">
   <div class="container footer__inner">
     <div class="footer__brand">
-      <a href="index.html" class="nav__logo">
-        <div class="nav__logo__mark">Z</div>
-        <span>ScaledIt</span>
-      </a>
-      <p>Customer acquisition and sales systems for vehicle service businesses — nationwide.</p>
+      <a href="index.html" class="rail__logo" style="color:var(--paper-3);"><div class="rail__logo__mark">Z</div><span>ScaledIt</span></a>
+      <p>Customer acquisition and sales systems for vehicle service businesses, nationwide.</p>
     </div>
     <div class="footer__cols">
-      <div class="footer__col">
-        <h4>Pages</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="method.html">Method</a></li>
-          <li><a href="results.html">Results</a></li>
-          <li><a href="system-preview.html">The System</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer__col">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="method.html">Meta Ads</a></li>
-          <li><a href="method.html">Google Ads</a></li>
-          <li><a href="method.html">CRM & Automations</a></li>
-          <li><a href="method.html">Landing Pages</a></li>
-          <li><a href="method.html">Sales Consulting</a></li>
-        </ul>
-      </div>
-      <div class="footer__col">
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="terms.html">Terms of Service</a></li>
-        </ul>
-      </div>
+      <div class="footer__col"><h4>Pages</h4><ul>
+        <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="method.html">Method</a></li>
+        <li><a href="results.html">Results</a></li><li><a href="system-preview.html">The System</a></li><li><a href="contact.html">Contact</a></li>
+      </ul></div>
+      <div class="footer__col"><h4>Services</h4><ul>
+        <li><a href="method.html">Meta Ads</a></li><li><a href="method.html">Google Ads</a></li><li><a href="method.html">CRM &amp; Automations</a></li>
+        <li><a href="method.html">Landing Pages</a></li><li><a href="method.html">Sales Consulting</a></li>
+      </ul></div>
+      <div class="footer__col"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li></ul></div>
     </div>
   </div>
-  <div class="footer__bottom">
-    <div class="container">
-      <p>© 2026 ZScaledIt. All rights reserved.</p>
-      <p>info@zscaledit.com</p>
-    </div>
-  </div>
+  <div class="footer__bottom"><div class="container"><p>&copy; 2026 ZScaledIt. All rights reserved.</p><p>info@zscaledit.com</p></div></div>
 </footer>
 
-<script src="assets/js/beams-background.js?v=20260628"></script>
-<script src="assets/js/main.js?v=20260619"></script>
+</div>
+
+<aside class="vx-seo-content" style="position:absolute;left:-10000px;top:-10000px;width:1px;height:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);">
+  <h1>The ZScaledIt client onboarding system and portal</h1>
+  <p>Every ZScaledIt client receives access to a private onboarding portal covering six areas: automated estimates and invoicing, CRM and payment integration, pipeline and opportunity tracking, simplified ad account access, a documented follow-up SOP, and clear expectations for response times and reporting.</p>
+
+  <h2>About this page</h2>
+
+  <h3>Estimates, invoicing, and CRM integration</h3>
+  <p>The portal walks new clients through how leads move automatically from first contact to a sent estimate, how invoicing fires the moment a job is marked complete, and how the CRM stays synced with payment processing so nothing needs double entry. See how this fits into the broader <a href="/method.html">five-step method</a>.</p>
+
+  <h3>Pipeline visibility and ad account access</h3>
+  <p>Clients get a live view of every lead and where it sits in the pipeline, plus step-by-step walkthroughs for granting Meta and Google Ads account access so campaigns launch without back-and-forth delays.</p>
+
+  <h3>The follow-up SOP and response expectations</h3>
+  <p>The portal documents the exact call cadence and follow-up rules ZScaledIt uses to convert a lead into a paid invoice, along with clear response-time and reporting-cadence expectations so clients always know what happens next. Book a <a href="/contact.html">free audit call</a> to see the system in action.</p>
+
+  <h3>References</h3>
+  <ul>
+    <li><a href="https://www.facebook.com/business/help/402791146561655" rel="noopener">Meta Business Help Center: Conversions API</a></li>
+  </ul>
+</aside>
+
+<script src="assets/js/main.js?v=20260717"></script>
+<script src="assets/js/reticle-cursor.js?v=20260717"></script>
 </body>
 </html>

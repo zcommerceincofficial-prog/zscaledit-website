@@ -1,0 +1,4 @@
+# ZScaledIt is not an ad publisher.
+# This file exists to satisfy IAB Authorized Digital Sellers spec
+# for sites that do not sell advertising inventory.
+# https://iabtechlab.com/ads-txt/
