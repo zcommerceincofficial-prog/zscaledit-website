@@ -235,6 +235,10 @@ button { font-family: inherit; cursor: pointer; }
   width: 38px; height: 38px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
 }
 .topbar__toggle span { display: block; width: 18px; height: 2px; background: var(--on-accent); }
+.topbar__actions { display: flex; align-items: center; gap: 10px; }
+.topbar__theme-toggle.theme-toggle {
+  width: auto; padding: 0; margin: 0;
+}
 .rail__mobile-panel {
   display: none;
   position: fixed; inset: 0; z-index: 99;
@@ -532,29 +536,27 @@ button { font-family: inherit; cursor: pointer; }
 @keyframes logo-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) { .logo-marquee__track { animation: none; } }
 
-/* ── Custom cursor: squiggly uptrend arrow (signature element, represents scale) ──
+/* ── Hover effect: uptrend-arrow graphic (signature element, represents scale) ──
+   Appears only while hovering an interactive element; system cursor stays visible.
    Desktop-only (see @media hover:hover below); no-op on touch. */
 .trend-cursor {
-  position: fixed; top: 0; left: 0; width: 34px; height: 34px;
+  position: fixed; top: 0; left: 0; width: 30px; height: 30px;
   pointer-events: none; z-index: 9999;
-  transition: opacity 0.15s ease;
+  transition: opacity 0.15s ease, transform 0.15s ease;
   opacity: 0;
+  transform-origin: center;
 }
+.trend-cursor.is-active { opacity: 1; }
 .trend-cursor__inner { display: block; width: 100%; height: 100%; transition: transform var(--t-fast); }
-.trend-cursor.is-active .trend-cursor__inner { transform: scale(1.18); }
+.trend-cursor.is-active .trend-cursor__inner { transform: scale(1.1); }
 .trend-cursor svg { width: 100%; height: 100%; overflow: visible; }
 .trend-cursor path {
   fill: none;
   stroke: var(--accent);
-  stroke-width: 2.5;
+  stroke-width: 3;
   stroke-linecap: round;
   stroke-linejoin: round;
   filter: drop-shadow(1px 1px 0 var(--ink));
-}
-.trend-cursor.is-active path { stroke: var(--accent-dark); }
-@media (hover: hover) and (pointer: fine) {
-  body.trend-cursor-on { cursor: none; }
-  body.trend-cursor-on a, body.trend-cursor-on button { cursor: none; }
 }
 @media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {
   .trend-cursor { display: none !important; }
