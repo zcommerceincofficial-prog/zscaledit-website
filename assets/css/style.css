@@ -136,18 +136,50 @@ body::after {
   .atmos__blob { animation: none !important; transition-duration: 0.4s; }
 }
 
-/* ── Ambient graphic: duotone ascending-bar motif (hero + a few key sections) ── */
-.atmos__graphic {
-  position: absolute;
-  right: -30px; bottom: -20px;
-  width: min(40vw, 420px); height: auto;
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 1.8s var(--ease-quint), transform 1.8s var(--ease-quint);
+/* ── Stone-graph backdrop: fixed, full-viewport, sits behind the entire page ──
+   A faceted-crystal ascending "scaling graph" made of low-poly stones.
+   Fixed brand palette (not theme-reactive), anchored bottom-right. */
+.stone-graph-bg {
+  position: fixed; inset: 0; z-index: -3;
+  overflow: hidden; pointer-events: none;
 }
-.atmos.is-on .atmos__graphic { opacity: 0.45; transform: translateY(0); }
-@media (max-width: 860px) { .atmos__graphic { display: none; } }
-@media (prefers-reduced-motion: reduce) { .atmos__graphic { transition-duration: 0.4s; } }
+.stone-graph-bg svg {
+  position: absolute; right: 0; bottom: 0;
+  width: min(92vw, 1180px); height: auto;
+  opacity: 0.5;
+}
+.stone-graph__stone {
+  opacity: 0;
+  transform: translateY(36px) scale(0.6);
+  transform-origin: center;
+  transition: opacity 0.5s var(--ease-quint), transform 0.5s var(--ease-quint);
+  transition-delay: calc(var(--stone-i) * 70ms);
+}
+.stone-graph-bg.is-in .stone-graph__stone { opacity: 1; transform: translateY(0) scale(1); }
+.stone-graph__line, .stone-graph__arrow {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  transition-delay: 480ms;
+}
+.stone-graph-bg.is-in .stone-graph__line,
+.stone-graph-bg.is-in .stone-graph__arrow { opacity: 1; }
+.stone-graph__line { stroke: var(--panel-accent); stroke-width: 2; stroke-dasharray: 4 6; }
+.stone-graph__arrow { fill: var(--panel-accent); }
+@media (max-width: 640px) { .stone-graph-bg svg { opacity: 0.32; } }
+@media (prefers-reduced-motion: reduce) {
+  .stone-graph__stone, .stone-graph__line, .stone-graph__arrow {
+    transition-duration: 0.01s !important; transition-delay: 0s !important;
+  }
+}
+
+/* ── Grand-opening intro curtain (plays on every load/refresh) ── */
+.intro-curtain {
+  position: fixed; inset: 0; z-index: 500;
+  background: var(--panel);
+  opacity: 1;
+  transition: opacity 0.32s ease;
+}
+.intro-curtain.is-out { opacity: 0; pointer-events: none; }
 
 h1, h2, h3, h4 { font-family: 'Bricolage Grotesque', sans-serif; letter-spacing: -0.02em; }
 a { color: inherit; text-decoration: none; }
