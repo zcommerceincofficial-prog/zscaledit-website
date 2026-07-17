@@ -50,6 +50,17 @@ toggles.forEach(t => t.addEventListener('click', () => {
   setTheme(current === 'dark' ? 'light' : 'dark');
 }));
 
+// Ambient background glow — fades in once per section as it scrolls into view
+const atmosObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('is-on');
+      atmosObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.15 });
+document.querySelectorAll('.atmos').forEach(el => atmosObserver.observe(el));
+
 // Fade-in on scroll
 const fadeObserver = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
