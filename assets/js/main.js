@@ -29,6 +29,27 @@ document.querySelectorAll('.rail__nav a, .rail__mobile-panel a').forEach(a => {
   }
 });
 
+// Theme toggle (light/dark), defaults to light, persisted in localStorage
+const THEME_KEY = 'zs-theme';
+const toggles = document.querySelectorAll('.theme-toggle');
+
+function syncToggles(theme) {
+  toggles.forEach(t => t.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false'));
+}
+
+function setTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  try { localStorage.setItem(THEME_KEY, theme); } catch (e) {}
+  syncToggles(theme);
+}
+
+syncToggles(document.documentElement.getAttribute('data-theme') || 'light');
+
+toggles.forEach(t => t.addEventListener('click', () => {
+  const current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+  setTheme(current === 'dark' ? 'light' : 'dark');
+}));
+
 // Fade-in on scroll
 const fadeObserver = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });

@@ -4,8 +4,8 @@
   "description": "Customer acquisition systems for vehicle service businesses.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#D0D4DB",
-  "theme_color": "#12161C",
+  "background_color": "#FFFFFF",
+  "theme_color": "#14121A",
   "icons": [
     { "src": "/assets/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
     { "src": "/assets/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }
