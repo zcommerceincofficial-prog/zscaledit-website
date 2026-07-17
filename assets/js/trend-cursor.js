@@ -1,7 +1,7 @@
-/* ZScaledIt — uptrend-arrow hover effect (signature element, represents scale)
-   System cursor stays visible; this graphic only appears while hovering
-   an interactive element. Desktop pointer only; no-op under touch or
-   prefers-reduced-motion. */
+/* ZScaledIt — uptrend-arrow cursor companion (signature element, represents scale)
+   Always visible alongside the system cursor (not a replacement for it) on
+   desktop pointers; bumps up slightly over interactive elements.
+   No-op under touch or prefers-reduced-motion. */
 (function () {
   const mq = window.matchMedia('(hover: hover) and (pointer: fine)');
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -19,10 +19,12 @@
   document.body.appendChild(el);
 
   let x = 0, y = 0, drawnX = 0, drawnY = 0;
+  let started = false;
   const EASE = 0.3;
 
   window.addEventListener('mousemove', (e) => {
     x = e.clientX; y = e.clientY;
+    if (!started) { started = true; drawnX = x; drawnY = y; el.classList.add('is-on'); }
   });
 
   const targets = 'a, button, .btn, .block, .svc, .case-card, .preview-card, input, textarea';
@@ -32,7 +34,6 @@
   document.addEventListener('mouseout', (e) => {
     if (e.target.closest(targets)) el.classList.remove('is-active');
   });
-  document.addEventListener('mouseleave', () => el.classList.remove('is-active'));
 
   function tick() {
     drawnX += (x - drawnX) * EASE;

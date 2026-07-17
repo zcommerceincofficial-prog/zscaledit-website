@@ -135,6 +135,20 @@ body::after {
 @media (prefers-reduced-motion: reduce) {
   .atmos__blob { animation: none !important; transition-duration: 0.4s; }
 }
+
+/* ── Ambient graphic: duotone ascending-bar motif (hero + a few key sections) ── */
+.atmos__graphic {
+  position: absolute;
+  right: -30px; bottom: -20px;
+  width: min(40vw, 420px); height: auto;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 1.8s var(--ease-quint), transform 1.8s var(--ease-quint);
+}
+.atmos.is-on .atmos__graphic { opacity: 0.45; transform: translateY(0); }
+@media (max-width: 860px) { .atmos__graphic { display: none; } }
+@media (prefers-reduced-motion: reduce) { .atmos__graphic { transition-duration: 0.4s; } }
+
 h1, h2, h3, h4 { font-family: 'Bricolage Grotesque', sans-serif; letter-spacing: -0.02em; }
 a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; }
@@ -579,17 +593,17 @@ button { font-family: inherit; cursor: pointer; }
 @keyframes logo-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) { .logo-marquee__track { animation: none; } }
 
-/* ── Hover effect: uptrend-arrow graphic (signature element, represents scale) ──
-   Appears only while hovering an interactive element; system cursor stays visible.
+/* ── Cursor companion: uptrend-arrow graphic (signature element, represents scale) ──
+   Always visible once the pointer moves, alongside the system cursor.
    Desktop-only (see @media hover:hover below); no-op on touch. */
 .trend-cursor {
   position: fixed; top: 0; left: 0; width: 30px; height: 30px;
   pointer-events: none; z-index: 9999;
-  transition: opacity 0.15s ease, transform 0.15s ease;
+  transition: opacity 0.2s ease;
   opacity: 0;
   transform-origin: center;
 }
-.trend-cursor.is-active { opacity: 1; }
+.trend-cursor.is-on { opacity: 1; }
 .trend-cursor__inner { display: block; width: 100%; height: 100%; transition: transform var(--t-fast); }
 .trend-cursor.is-active .trend-cursor__inner { transform: scale(1.1); }
 .trend-cursor svg { width: 100%; height: 100%; overflow: visible; }
