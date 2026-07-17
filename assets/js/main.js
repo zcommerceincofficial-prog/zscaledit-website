@@ -29,7 +29,7 @@ document.querySelectorAll('.rail__nav a, .rail__mobile-panel a').forEach(a => {
   }
 });
 
-// Theme toggle (light/dark), defaults to light, persisted in localStorage
+// Theme toggle (light/dark), defaults to dark, persisted in localStorage
 const THEME_KEY = 'zs-theme';
 const toggles = document.querySelectorAll('.theme-toggle');
 
@@ -43,7 +43,7 @@ function setTheme(theme) {
   syncToggles(theme);
 }
 
-syncToggles(document.documentElement.getAttribute('data-theme') || 'light');
+syncToggles(document.documentElement.getAttribute('data-theme') || 'dark');
 
 toggles.forEach(t => t.addEventListener('click', () => {
   const current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
