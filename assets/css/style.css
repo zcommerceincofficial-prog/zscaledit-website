@@ -1,65 +1,65 @@
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Public+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
 
 /* ──────────────────────────────────────────────
-   ZScaledIt Design Tokens
+   Kairo Design Tokens
    Archetype: neubrutalism (thick borders, offset hard shadows, raw honesty)
-   Palette: purple + white (light, default) / purple + black (dark, toggle)
+   Palette: forest green + off-white (light, default) / forest green + near-black (dark, toggle)
    "paper"/"ink" are roles, not literal colors: they swap wholesale per theme,
    so every component below (rail, footer, cards, shadows) just works in both.
    ────────────────────────────────────────────── */
 :root,
 :root[data-theme="light"] {
   --paper:      #FFFFFF;
-  --paper-2:    #F4F1FA;
+  --paper-2:    #F3F1EA;
   --paper-3:    #FFFFFF;
-  --ink:        #14121A;
-  --ink-2:      #322D3D;
-  --ink-3:      #57515F;
-  --ink-4:      #7A7482;
-  --line:       rgba(20,18,26,0.14);
-  --line-2:     rgba(20,18,26,0.28);
+  --ink:        #12201B;
+  --ink-2:      #2E3F38;
+  --ink-3:      #56655F;
+  --ink-4:      #7C8983;
+  --line:       rgba(18,32,27,0.14);
+  --line-2:     rgba(18,32,27,0.28);
 
-  --accent:       #8B5CF6;
-  --accent-dark:  #6D28D9;
-  --accent-dim:   rgba(139,92,246,0.10);
-  --navy:         #2C2640;
-  --navy-2:       #3A3252;
+  --accent:       #1E7A4C;
+  --accent-dark:  #145C38;
+  --accent-dim:   rgba(30,122,76,0.10);
+  --navy:         #16332A;
+  --navy-2:       #1F4536;
   --good:         #16A34A;
   --bad:          #DC2626;
 }
 
 :root[data-theme="dark"] {
-  --paper:      #0A0A0A;
-  --paper-2:    #141118;
-  --paper-3:    #17141C;
-  --ink:        #F4F1FA;
-  --ink-2:      #D8D2E4;
-  --ink-3:      #A79FB3;
-  --ink-4:      #79717F;
-  --line:       rgba(244,241,250,0.14);
-  --line-2:     rgba(244,241,250,0.28);
+  --paper:      #0A0F0C;
+  --paper-2:    #131F19;
+  --paper-3:    #16231C;
+  --ink:        #F2F5F0;
+  --ink-2:      #D6DED8;
+  --ink-3:      #A3B0A8;
+  --ink-4:      #74827B;
+  --line:       rgba(242,245,240,0.14);
+  --line-2:     rgba(242,245,240,0.28);
 
-  --accent:       #A78BFA;
-  --accent-dark:  #C4B0FC;
-  --accent-dim:   rgba(167,139,250,0.14);
-  --navy:         #C9BFE0;
-  --navy-2:       #DBD3EC;
+  --accent:       #34C77B;
+  --accent-dark:  #6FE3A6;
+  --accent-dim:   rgba(52,199,123,0.14);
+  --navy:         #BFE3D2;
+  --navy-2:       #D6F0E3;
   --good:         #4ADE80;
   --bad:          #F87171;
 }
 
 /* Fixed "panel" tokens: the rail/topbar/footer and a few accent blocks are
-   always a dark, purple-accented panel in BOTH themes on purpose (a constant
+   always a dark, green-accented panel in BOTH themes on purpose (a constant
    brand anchor), so they do not participate in the light/dark canvas flip. */
 :root {
-  --panel:        #14121A;
-  --panel-2:      #201C29;
-  --panel-text:   #FFFFFF;
-  --panel-dim:    rgba(255,255,255,0.72);
-  --panel-hover:  rgba(255,255,255,0.10);
-  --panel-border: rgba(255,255,255,0.18);
-  --panel-accent: #B39DFB;
-  --on-accent:    #14121A;
+  --panel:        #0F1912;
+  --panel-2:      #16241C;
+  --panel-text:   #F7F5EF;
+  --panel-dim:    rgba(247,245,239,0.72);
+  --panel-hover:  rgba(247,245,239,0.10);
+  --panel-border: rgba(247,245,239,0.18);
+  --panel-accent: #3DDB8A;
+  --on-accent:    #0F1912;
 }
 
 :root {
@@ -534,7 +534,7 @@ button { font-family: inherit; cursor: pointer; }
 .faq-item h4 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
 .faq-item p { font-size: 14px; color: var(--ink-3); line-height: 1.6; margin: 0; }
 
-/* ── Compare table (other agencies vs ZScaledIt) ── */
+/* ── Compare table (other agencies vs Kairo) ── */
 .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 .compare-col { border: 2px solid var(--ink); border-radius: var(--radius); padding: 26px; }
 .compare-col--them { background: var(--paper-3); }

@@ -1,4 +1,4 @@
-/* ZScaledIt — main.js */
+/* Kairo — main.js */
 
 // Mobile rail panel
 const topToggle = document.getElementById('railToggle');
@@ -30,7 +30,7 @@ document.querySelectorAll('.rail__nav a, .rail__mobile-panel a').forEach(a => {
 });
 
 // Theme toggle (light/dark), defaults to dark, persisted in localStorage
-const THEME_KEY = 'zs-theme';
+const THEME_KEY = 'kairo-theme';
 const toggles = document.querySelectorAll('.theme-toggle');
 
 function syncToggles(theme) {

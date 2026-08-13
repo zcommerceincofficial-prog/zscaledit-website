@@ -1,4 +1,4 @@
-/* ZScaledIt — uptrend-arrow cursor companion (signature element, represents scale)
+/* Kairo — uptrend-arrow cursor companion (signature element, represents scale)
    Always visible alongside the system cursor (not a replacement for it) on
    desktop pointers; bumps up slightly over interactive elements.
    No-op under touch or prefers-reduced-motion. */
