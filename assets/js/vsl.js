@@ -18,7 +18,7 @@ const fadeObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('.fade').forEach(el => fadeObserver.observe(el));
 
 // Qualifying form
-const QUALIFY_FORM_WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/5qykfCnwuEcAEMDJIwph/webhook-trigger/f6b693c2-709b-45e4-91b8-100f1497099c';
+const QUALIFY_FORM_WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/5qykfCnwuEcAEMDJIwph/webhook-trigger/5525b602-da7c-4c8c-95df-c9bbdaf09116';
 
 const qualifyForm = document.getElementById('qualifyForm');
 if (qualifyForm) {
