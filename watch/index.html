@@ -15,16 +15,6 @@
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <style>
-    .video-placeholder{
-      position: absolute; inset: 0;
-      display: flex; align-items: center; justify-content: center;
-      text-align: center;
-      color: var(--ink-3);
-      font-size: 15px;
-      padding: 0 24px;
-    }
-  </style>
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -53,8 +43,13 @@
 
     <div class="video-frame fade">
       <div class="video-frame__wrap">
-        <!-- TODO: swap in <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID?modestbranding=1&rel=0&color=white" ...> once video is provided -->
-        <div class="video-placeholder">Video going up shortly.</div>
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/X3e9U4zir6s?modestbranding=1&rel=0&color=white"
+          title="A quick intro from Kairo"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
       </div>
     </div>
 
