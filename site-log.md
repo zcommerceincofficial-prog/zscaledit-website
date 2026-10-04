@@ -50,3 +50,9 @@ START LINE (derived from the 2026-10-04 session, not typed by the owner):
             www custom domain was "deactivated"; re-validation started, Cloudflare reports
             "CNAME record not set". Waiting on owner to point the www DNS record at
             zscaledit-website.pages.dev (wrangler OAuth has no DNS scope). www returns 522 until then.
+2026-10-04  www.zscaledit.site fixed. Root cause: the www Pages custom domain was stuck "deactivated"
+            even though the DNS CNAME (www -> zscaledit-website.pages.dev, proxied) was already
+            correct. Owner clicked Check DNS records (www started working 11:40); I also removed and
+            re-added the domain via the Pages API (active 11:42). Verified: https://www -> one 301 ->
+            https://zscaledit.site/ 200; path and query (gclid, utm) kept. http://www takes two hops
+            (http->https at the edge, then www->apex); fine for typed traffic, ads should use https.
