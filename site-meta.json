@@ -1,0 +1,63 @@
+{
+  "_readme": [
+    "Read by scripts/export-transform.mjs (head, robots, sitemap) and scripts/kairo-build.mjs (JSON-LD).",
+    "approved: true since 2026-10-04: owner approved the copy and said 'push it live'.",
+    "Titles under 60 characters, descriptions under 155 with a call to action.",
+    "The entity sentence is used verbatim in the home description and the schema description."
+  ],
+
+  "approved": true,
+
+  "site": {
+    "url": "https://zscaledit.site",
+    "name": "Kairo",
+    "titleSuffix": " | Kairo",
+    "language": "en-US",
+    "themeColor": "#0A0F0C",
+    "trailingSlash": false,
+    "defaultOgImage": "/assets/og-image.png",
+    "entity": "Kairo runs Google and Facebook ads, landing pages and automatic lead follow-up for auto aftermarket shops across the United States.",
+    "email": "izaiah@torqcrm.com",
+    "founder": "Izaiah Jackson",
+    "tracking": "<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src=\"https://www.clarity.ms/tag/\"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,\"clarity\",\"script\",\"xq66h1b3qa\");</script>"
+  },
+
+  "pages": {
+    "index": {
+      "title": "Ads and Follow-Up for Auto Aftermarket Shops | Kairo",
+      "description": "Kairo runs Google and Facebook ads, landing pages and automatic lead follow-up for auto aftermarket shops across the United States. Book a free audit.",
+      "ogImageAlt": "The Kairo logo",
+      "crumb": "Home"
+    },
+    "how-it-works": {
+      "title": "How It Works: Ad Clicks to Booked Jobs | Kairo",
+      "description": "Five steps from a free market audit to ads that book jobs for wrap, PPF, tint, glass and detail shops. First $500 in ad spend is on me. Book your audit.",
+      "ogImageAlt": "The Kairo logo",
+      "crumb": "How it works"
+    },
+    "open-markets": {
+      "title": "Open Markets: One Shop Per Service Per City | Kairo",
+      "description": "I work with one shop per service in each market. See the 50 largest US metros, then book a call to check if your market is open.",
+      "ogImageAlt": "The Kairo logo",
+      "crumb": "Open markets"
+    },
+    "book": {
+      "title": "Book a Free Market Audit for Your Shop | Kairo",
+      "description": "Book a free 30-minute market audit for your wrap, PPF, tint, auto glass or detail shop, on Zoom or the phone. Pick a time now.",
+      "ogImageAlt": "The Kairo logo",
+      "crumb": "Book"
+    },
+    "privacy": {
+      "title": "Privacy Policy | Kairo",
+      "description": "How Kairo collects, uses and protects your information, and which tools this site uses. Questions? Email izaiah@torqcrm.com.",
+      "ogImageAlt": "The Kairo logo",
+      "crumb": "Privacy"
+    },
+    "terms": {
+      "title": "Terms of Service | Kairo",
+      "description": "The terms for using the Kairo website and services. Questions about them? Email izaiah@torqcrm.com.",
+      "ogImageAlt": "The Kairo logo",
+      "crumb": "Terms"
+    }
+  }
+}

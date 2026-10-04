@@ -1,2 +1,10 @@
-.wrangler/
 node_modules/
+.env
+.env.*
+.wrangler/
+.DS_Store
+qa/
+kairo-www-fix/
+.build/
+data/census/*
+!data/census/top50-metros.json

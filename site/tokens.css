@@ -1,0 +1,125 @@
+/* Kairo tokens. Every colour, font, size, space and motion value lives here.
+   Pages use these through var(--name) in inline styles. Change a value here and the whole site moves. */
+:root {
+  /* colour: owned brand, DNA block */
+  --canvas: #0A0F0C;
+  --surface: #122D20;
+  --ink: #F2F5F0;
+  --muted: #A3B0A8;
+  --hairline: #26332B;
+  --accent: #34C77B;
+  --on-accent: #0A0F0C;
+  /* neutral ramp, hue held at 161 */
+  --n0: #0A0F0C; --n1: #122D20; --n2: #26332B; --n3: #A3B0A8; --n4: #F2F5F0;
+
+  /* type */
+  --f-display: 'DM Serif Display', serif;
+  --f-body: 'Fira Sans', sans-serif;
+  --fs-display: clamp(39px, calc(8px + 6.2vmin), 69px);
+  --fs-h1: clamp(31px, calc(6px + 5.2vmin), 55px);
+  --fs-h2: clamp(25px, calc(12px + 2.6vmin), 35px);
+  --fs-h3: clamp(20px, calc(10px + 2vmin), 28px);
+  --fs-lead: clamp(20px, calc(17px + 0.6vmin), 22.5px);
+  --fs-body: 16px;
+  --fs-label: 13px;
+  --lh-display: 1.02; --lh-h1: 1.05; --lh-h2: 1.12; --lh-h3: 1.2; --lh-lead: 1.45; --lh-body: 1.55; --lh-label: 1.35;
+  --track-label: 0.08em;
+  --measure: 36em;
+
+  /* space */
+  --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 24px; --s-6: 32px; --s-7: 48px; --s-8: 64px; --s-9: 96px;
+  --gutter: 20px;
+  --gap-section: clamp(80px, 13vmin, 152px);
+  --gap-short: clamp(48px, 7vmin, 72px);
+  --pad-panel-x: 24px;
+  --pad-panel-y: clamp(40px, 7vmin, 96px);
+
+  /* layout: Work Light panels */
+  --panel-w: calc(100% - 28px);
+  --panel-shift: 28px;
+  --panel-inset: 28px;
+  --map-w: calc(100% - 20px);
+  --frame-w: 78%;
+
+  /* responsive switches */
+  --phone-flex: flex;
+  --desk-flex: none;
+  --sticky-space: 92px;
+
+  /* shape */
+  --r-control: 2px;
+  --dot: 8px;
+
+  /* motion: one easing everywhere */
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --t-feedback: 120ms;
+  --t-state: 220ms;
+  --t-layout: 360ms;
+  --t-entrance: 600ms;
+  --motion: 1;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --fs-body: 18px;
+    --fs-label: 14.4px;
+    --gutter: clamp(32px, 5vw, 72px);
+    --pad-panel-x: clamp(40px, 5vw, 80px);
+    --panel-w: 70%;
+    --panel-shift: 30%;
+    --panel-inset: 0px;
+    --map-w: 100%;
+    --frame-w: 100%;
+    --phone-flex: none;
+    --desk-flex: flex;
+    --sticky-space: 48px;
+    --dot: 9px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --t-feedback: 0ms; --t-state: 0ms; --t-layout: 0ms; --t-entrance: 0ms; --motion: 0; }
+  *, *::before, *::after { transition-duration: 0ms !important; transition-delay: 0ms !important; animation: none !important; }
+}
+
+/* resets */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; overflow-x: clip; background: var(--canvas); color-scheme: dark; }
+body { overflow-x: clip; }
+body {
+  margin: 0;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+/* page backdrop: the Kairo loop as a quiet tile, lit from the top right */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='72' height='72'><g fill='none' stroke='%2326332B' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><path d='M30 60 H12 V12 H60 V60'/><path d='M35 47 H24 V24 H48 V47 H43'/></g></svg>");
+  background-size: 72px 72px;
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 100% 0%, #0A0F0C 0%, transparent 100%);
+  mask-image: radial-gradient(ellipse 70% 60% at 100% 0%, #0A0F0C 0%, transparent 100%);
+}
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 80;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23g)'/></svg>");
+}
+a { color: var(--ink); }
+a:hover { color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+h1, h2, h3, p, ul, ol, figure { margin: 0; }
+h1, h2, h3 { font-family: var(--f-display); font-weight: 400; font-style: normal; text-wrap: balance; }
+p, li { text-wrap: pretty; }

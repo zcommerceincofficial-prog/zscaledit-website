@@ -1,0 +1,56 @@
+<!-- kit:notes
+     THE PER-PAGE HEAD BLOCK. scripts/export-transform.mjs injects everything between
+     kit:head:start and kit:head:end into the <head> of every page in dist/.
+
+     Edit THIS file. Never edit a file inside dist/: the next build overwrites it.
+
+     Placeholders are double curly braces. The build fills them from site-meta.json:
+       title           pages.<id>.title
+       description     pages.<id>.description
+       canonical       site.url plus the page's own extensionless path
+       og_image        pages.<id>.ogImage, else site.defaultOgImage
+       og_image_alt    pages.<id>.ogImageAlt
+       site_name       site.name
+       theme_color     site.themeColor
+       robots          "index, follow" once approved is true, otherwise "noindex, nofollow"
+       tracking        site.tracking, and only when approved is true
+
+     A line whose placeholder has no value is left OFF the page and listed in the build
+     summary, so nothing ships as an empty tag.
+
+     Comment blocks like this one are stripped at build time and never reach a visitor.
+-->
+<!-- kit:head:start -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+<link rel="canonical" href="{{canonical}}">
+<meta name="robots" content="{{robots}}">
+<meta name="theme-color" content="{{theme_color}}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{site_name}}">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{description}}">
+<meta property="og:url" content="{{canonical}}">
+<meta property="og:image" content="{{og_image}}">
+<meta property="og:image:alt" content="{{og_image_alt}}">
+<meta name="twitter:card" content="summary_large_image">
+<!-- kit:notes
+     ================== TRACKING SLOT ==================
+     Paste pixel, tag manager and analytics snippets on the line below, between the
+     two "tracking" marker comments, in THIS file, once. They then appear on every
+     page of the site.
+
+     Rather keep the snippet out of the repository? Put it in site-meta.json under
+     site.tracking instead and leave the slot as it is.
+
+     The slot stays EMPTY on a preview build. The build enforces that: while
+     approved is false in site-meta.json, nothing is written here, so a preview site
+     cannot fire the owner's pixel or pollute the owner's numbers.
+     ===================================================
+-->
+<!-- tracking -->
+{{tracking}}
+<!-- /tracking -->
+<!-- kit:head:end -->

@@ -1,0 +1,13 @@
+{
+  "name": "kairo-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/kairo-build.mjs",
+    "check": "node scripts/machine-layer-check.mjs dist --failures-only",
+    "qa": "node scripts/mobile-qa.mjs --dir dist"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^25.12.0"
+  }
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Open markets | Kairo</title>
+<meta name="description" content="I work with one shop per service in each market. A wrap shop and a tint shop can share a city. Two wrap shops can't.">
+<link rel="canonical" href="https://zscaledit.site/open-markets">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Check if your market is still open">
+<meta property="og:description" content="I work with one shop per service in each market. A wrap shop and a tint shop can share a city. Two wrap shops can't.">
+<meta property="og:url" content="https://zscaledit.site/open-markets">
+<meta property="og:image" content="https://zscaledit.site/og-image.png">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Fira+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<script src="market-data.js"></script>
+</helmet>
+
+<header style="display:flex;align-items:flex-start;justify-content:space-between;gap:var(--s-4);padding:0 var(--gutter) var(--s-2)">
+  <a href="index.dc.html" style="display:flex;align-items:flex-end;background:var(--ink);padding:var(--s-5) var(--s-2) var(--s-2);min-height:44px"><img src="kairo-logo-full-transparent.png" alt="Kairo" width="49" height="40" style="display:block;height:40px;width:auto"></a>
+  <nav style="display:flex;align-items:center;gap:var(--s-5);padding-top:var(--s-4)">
+    <a href="how-it-works.dc.html" style="display:flex;align-items:center;min-height:44px;font-size:var(--fs-body);text-decoration:none">How it works</a>
+    <a href="open-markets.dc.html" aria-current="page" style="display:flex;align-items:center;min-height:44px;font-size:var(--fs-body);text-decoration:none">Open markets</a>
+    <a href="book.dc.html" onClick="{{ press_nav }}" aria-busy="{{ busy.nav }}" style="display:var(--desk-flex);position:relative;overflow:hidden;align-items:center;min-height:44px;padding:0 var(--s-4);background:var(--accent);color:var(--on-accent);font-weight:600;font-size:var(--fs-body);text-decoration:none;border-radius:var(--r-control);transition:transform var(--t-feedback) var(--ease)" style-hover="transform:translateY(-2px);color:var(--on-accent)" style-active="transform:scale(0.97)">Book your free audit<span aria-hidden="true" style="position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--on-accent);transform-origin:left;transform:{{ bars.nav }};transition:transform var(--t-layout) var(--ease)"></span></a>
+  </nav>
+</header>
+
+<main>
+  <section data-screen-label="01 Header" style="padding-top:var(--s-6)">
+    <div style="position:relative;overflow:hidden;isolation:isolate;width:var(--panel-w);background:var(--surface);padding:var(--pad-panel-y) var(--pad-panel-x) var(--pad-panel-y) var(--gutter);display:flex;flex-direction:column;gap:var(--s-5)">
+      <svg aria-hidden="true" viewBox="0 0 720 380" preserveAspectRatio="xMaxYMid slice" style="position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none"><path d="M-20 350 H380 V270 H470 V350 H520 L680 120" fill="none" style="stroke:var(--hairline)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"></path><path d="M732 46 L656 84 L706 118 Z" style="fill:var(--hairline);stroke:var(--hairline)" stroke-width="6" stroke-linejoin="round"></path></svg>
+      <h1 style="font-size:var(--fs-display);line-height:var(--lh-display);color:var(--ink);max-width:13ch">Check if your market is still open</h1>
+      <p style="color:var(--ink);max-width:var(--measure)">I work with one shop per service in each market. A wrap shop and a tint shop can share a city. Two wrap shops can't.</p>
+    </div>
+  </section>
+
+  <div style="margin-top:var(--s-7)">
+  <ul style="list-style:none;padding:var(--s-5) var(--gutter);display:flex;flex-wrap:wrap;gap:var(--s-3) var(--s-7);border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline)">
+    <li style="display:flex;align-items:center;gap:var(--s-3);color:var(--muted)"><span aria-hidden="true" style="width:6px;height:6px;background:var(--accent);flex:none"></span><span>First <span style="font-variant-numeric:tabular-nums">$500</span> in ad spend on me</span></li>
+    <li style="display:flex;align-items:center;gap:var(--s-3);color:var(--muted)"><span aria-hidden="true" style="width:6px;height:6px;background:var(--accent);flex:none"></span><span>One shop per service in each market</span></li>
+    <li style="display:flex;align-items:center;gap:var(--s-3);color:var(--muted)"><span aria-hidden="true" style="width:6px;height:6px;background:var(--accent);flex:none"></span><span>Every account run by the founder</span></li>
+  </ul>
+  </div>
+
+  <section data-screen-label="02 Map" style="padding:var(--gap-short) 0 0 var(--gutter)">
+    <figure style="display:flex;flex-direction:column;gap:var(--s-4)">
+      <div ref="{{ mapRef }}" style="position:relative;width:min(100%, 1320px);margin-left:auto;aspect-ratio:1000/630">
+        <svg viewBox="0 0 1000 630" preserveAspectRatio="none" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;display:block"><path d="{{ outline }}" style="fill:var(--surface);stroke:var(--hairline);stroke-width:1" vector-effect="non-scaling-stroke"></path></svg>
+        <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;transform:{{ headTf }};opacity:{{ headOp }};transition:transform calc(var(--t-entrance) * 2) var(--ease), opacity var(--t-state) var(--ease)"><span style="position:absolute;top:-12px;bottom:-12px;left:0;width:1px;background:var(--accent)"></span></div>
+        <div id="market-map" role="list" style="position:absolute;inset:0;overflow:clip;overflow-clip-margin:22px">
+          <sc-for list="{{ dots }}" as="d" hint-placeholder-count="0">
+            <button type="button" role="listitem" data-metro="{{ d.name }}" aria-label="{{ d.name }}" aria-pressed="{{ d.on }}" onClick="{{ d.select }}" onFocus="{{ d.select }}" onMouseEnter="{{ d.select }}" style="position:absolute;left:{{ d.left }};top:{{ d.top }};width:44px;height:44px;margin:-22px 0 0 -22px;padding:0;border:0;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center">
+              <span style="display:block;width:var(--dot);height:var(--dot);border-radius:50%;background:var(--accent);opacity:{{ d.op }};transform:{{ d.tf }};transition:opacity var(--t-entrance) var(--ease) {{ d.delay }}, transform var(--t-state) var(--ease) {{ d.delay }}"></span>
+            </button>
+          </sc-for>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:var(--s-2) var(--s-8);padding-right:var(--gutter);align-items:flex-start">
+        <figcaption style="flex:1 1 20rem;font-size:var(--fs-body);color:var(--muted);max-width:var(--measure)">Dots mark the <span style="font-variant-numeric:tabular-nums">50</span> largest US metro areas. I confirm your market on the call.</figcaption>
+        <div style="flex:1 1 18rem">
+      <p aria-live="polite" style="min-height:3.2em;font-size:var(--fs-body);line-height:var(--lh-label);display:flex;flex-wrap:wrap;gap:0 var(--s-3)">
+        <sc-if value="{{ hasSel }}" hint-placeholder-val="{{ false }}"><span style="color:var(--ink);font-weight:500">{{ selName }}</span><span style="color:var(--accent)">Ask me if your service is open there.</span></sc-if>
+      </p>
+        </div>
+      </div>
+    </figure>
+  </section>
+
+  <section data-screen-label="03 Claim" style="padding:var(--gap-section) var(--gutter);display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:var(--s-5) var(--s-8)">
+    <p style="font-size:var(--fs-lead);line-height:var(--lh-lead);color:var(--ink);max-width:26em">Don't see your city? Most smaller markets are open too. Ask me on the call.</p>
+      <a href="book.dc.html" onClick="{{ press_close }}" aria-busy="{{ busy.close }}" style="position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:var(--s-3);min-height:52px;padding:0 var(--s-5);background:var(--accent);color:var(--on-accent);font-weight:600;font-size:var(--fs-body);text-decoration:none;border-radius:var(--r-control);transition:transform var(--t-feedback) var(--ease)" style-hover="transform:translateY(-2px);color:var(--on-accent)" style-active="transform:scale(0.97)">
+        <span>Claim your market</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h18m0 0l-8.5-8.5M21 12l-8.5 8.5"></path></svg>
+        <span aria-hidden="true" style="position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--on-accent);transform-origin:left;transform:{{ bars.close }};transition:transform var(--t-layout) var(--ease)"></span>
+      </a>
+  </section>
+</main>
+
+<footer style="border-top:1px solid var(--hairline);padding:var(--s-7) var(--gutter) var(--sticky-space);display:flex;flex-wrap:wrap;gap:var(--s-5) var(--s-8);align-items:flex-start">
+  <p style="flex:1 1 18rem;color:var(--muted);max-width:28em">Kairo. Ads and follow-up for auto aftermarket shops. United States only.</p>
+  <nav style="flex:2 1 24rem;display:flex;flex-wrap:wrap;gap:0 var(--s-5);align-items:center">
+    <a href="mailto:izaiah@torqcrm.com" style="display:flex;align-items:center;min-height:44px">izaiah@torqcrm.com</a>
+    <a href="how-it-works.dc.html" style="display:flex;align-items:center;min-height:44px;color:var(--muted)">How it works</a>
+    <a href="open-markets.dc.html" style="display:flex;align-items:center;min-height:44px;color:var(--muted)">Open markets</a>
+    <a href="book.dc.html" style="display:flex;align-items:center;min-height:44px;color:var(--muted)">Book</a>
+    <a href="/privacy" style="display:flex;align-items:center;min-height:44px;color:var(--muted)">Privacy</a>
+    <a href="/terms" style="display:flex;align-items:center;min-height:44px;color:var(--muted)">Terms</a>
+    <span style="display:flex;align-items:center;min-height:44px;color:var(--muted)">(c) 2026 Kairo</span>
+  </nav>
+</footer>
+
+<div style="display:var(--phone-flex);position:fixed;left:0;right:0;bottom:0;z-index:50;padding:var(--s-3) var(--gutter) calc(var(--s-3) + env(safe-area-inset-bottom));background:var(--canvas);border-top:1px solid var(--hairline)">
+  <a href="book.dc.html" onClick="{{ press_sticky }}" aria-busy="{{ busy.sticky }}" style="flex:1;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;gap:var(--s-3);min-height:52px;background:var(--accent);color:var(--on-accent);font-weight:600;font-size:var(--fs-body);text-decoration:none;border-radius:var(--r-control);transition:transform var(--t-feedback) var(--ease)" style-active="transform:scale(0.97)" style-hover="color:var(--on-accent)">
+    <span>Book your free audit</span>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h18m0 0l-8.5-8.5M21 12l-8.5 8.5"></path></svg>
+    <span aria-hidden="true" style="position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--on-accent);transform-origin:left;transform:{{ bars.sticky }};transition:transform var(--t-layout) var(--ease)"></span>
+  </a>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { pressed: null, ready: !!window.KAIRO_MAP, lit: false, swept: false, sel: null };
+  mapRef = React.createRef();
+
+  componentDidMount() {
+    const wait = () => {
+      if (!window.KAIRO_MAP) { this.t = setTimeout(wait, 40); return; }
+      this.setState({ ready: true }, this.observe);
+    };
+    wait();
+    this.onShow = () => this.setState({ pressed: null });
+    window.addEventListener('pageshow', this.onShow);
+  }
+  componentWillUnmount() {
+    clearTimeout(this.t); clearTimeout(this.t2);
+    if (this.io) this.io.disconnect();
+    window.removeEventListener('pageshow', this.onShow);
+  }
+  observe = () => {
+    const el = this.mapRef.current;
+    const light = () => {
+      this.setState({ lit: true });
+      this.t2 = setTimeout(() => this.setState((s) => ({ swept: true, sel: s.sel || window.KAIRO_MAP.METROS[0][0] })), 1700);
+    };
+    if (!el || !('IntersectionObserver' in window)) { light(); return; }
+    this.io = new IntersectionObserver((es) => {
+      if (es.some((e) => e.isIntersecting)) { this.io.disconnect(); light(); }
+    }, { threshold: 0.3 });
+    this.io.observe(el);
+  };
+  press = (key) => (e) => {
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const href = e.currentTarget.getAttribute('href');
+    e.preventDefault();
+    this.setState({ pressed: key });
+    setTimeout(() => { window.location.href = href; if (href.charAt(0) === '#') this.setState({ pressed: null }); }, 380);
+  };
+  pressVals(keys) {
+    const bars = {}, busy = {}, out = {};
+    keys.forEach((k) => {
+      bars[k] = this.state.pressed === k ? 'scaleX(1)' : 'scaleX(0)';
+      busy[k] = this.state.pressed === k ? 'true' : 'false';
+      out['press_' + k] = this.press(k);
+    });
+    return Object.assign(out, { bars, busy });
+  }
+
+
+  // time fraction at which the shared easing curve reaches progress p, so each dot lights as the plotter head passes it
+  inv(p) {
+    if (!this._lut) {
+      const bz = (t, a, b) => 3 * a * t * (1 - t) * (1 - t) + 3 * b * t * t * (1 - t) + t * t * t;
+      this._lut = [];
+      for (let i = 0; i <= 200; i++) { const t = i / 200; this._lut.push([bz(t, 0.16, 0.3), bz(t, 1, 1)]); }
+    }
+    for (let i = 0; i < this._lut.length; i++) if (this._lut[i][1] >= p) return this._lut[i][0];
+    return 1;
+  }
+  renderVals() {
+    const { lit, swept, sel } = this.state;
+    const M = window.KAIRO_MAP;
+    const dots = M ? M.METROS.map(([name, lat, lon]) => {
+      const p = M.project(lat, lon);
+      const on = sel === name;
+      return {
+        name, on: on ? 'true' : 'false',
+        left: p.x.toFixed(2) + '%', top: p.y.toFixed(2) + '%',
+        op: lit ? 1 : 0,
+        tf: !lit ? 'scale(0.2)' : on ? 'scale(1.9)' : 'scale(1)',
+        delay: swept ? '0ms' : 'calc(var(--motion) * ' + Math.round(this.inv(Math.min(1, Math.max(0, p.x / 100))) * 1200) + 'ms)',
+        select: () => this.setState({ sel: name }),
+      };
+    }) : [];
+    return Object.assign({
+      outline: M ? M.OUTLINE : '',
+      headTf: lit ? 'translateX(100%)' : 'translateX(0)',
+      headOp: lit && !swept ? 1 : 0,
+      dots, mapRef: this.mapRef,
+      hasSel: !!sel, selName: sel || '',
+    }, this.pressVals(['nav', 'close', 'sticky']));
+  }
+}
+</script>
+</body>
+</html>
