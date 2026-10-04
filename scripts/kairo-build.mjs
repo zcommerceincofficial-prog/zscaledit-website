@@ -190,6 +190,8 @@ function pageShell(id, title, css, body) {
 <link rel="stylesheet" href="/tokens.css">
 <style>
 ${css}
+/* kairo-build: footer links meet the 44px tap target on narrow text like "Book" (mobile-qa 2026-10-04) */
+footer nav a{min-width:44px;justify-content:center}
 </style>
 ${FAVICONS}
 ${jsonLd(id)}
