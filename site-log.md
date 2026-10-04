@@ -56,3 +56,13 @@ START LINE (derived from the 2026-10-04 session, not typed by the owner):
             re-added the domain via the Pages API (active 11:42). Verified: https://www -> one 301 ->
             https://zscaledit.site/ 200; path and query (gclid, utm) kept. http://www takes two hops
             (http->https at the edge, then www->apex); fine for typed traffic, ads should use https.
+2026-10-04  Copy doc APPROVED by owner ("Approved"). Markers closed: no phone, ads live by day 8,
+            Monday report, clients keep ad accounts, audit on Zoom or phone, no "taken" map dots,
+            after-booking line rewritten to make no claim. 1 open: founder photo. STEP 1 DONE.
+2026-10-04  Step 2 prep: DNA rolled with Python secrets (archetype 24 terminal, layout 2 asymmetric,
+            type display serif + humanist sans after a contrast reroll, motion 2 kinetic, signature
+            derived = open markets map, icons Iconoir, texture duotone + grain, imagery desaturated
+            editorial). Colour exempt: owned palette (logo #122D20 + approved Aug tokens), contrast
+            all pass. design/dna-form.md, design/ledger.md row 1, and the assembled prompt
+            prompts/claude-design-prompt-kairo.md (3,922 words, 0 em dashes) written. Logo files for
+            upload in design/upload/. Waiting on owner's Claude Design session.

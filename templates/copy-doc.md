@@ -1,7 +1,7 @@
 # Copy doc: Kairo
 
 Version 1 | Written 2026-10-04 | Interviewed: owner (Izaiah Jackson), 2026-10-04
-Approved: NOT YET
+Approved: 2026-10-04 (owner, in chat: "Approved")
 
 ## Interview record (feel answers verbatim)
 
@@ -52,8 +52,7 @@ traffic will come from.
 
 ## Shared elements, written once and counted once
 
-**Phone line.** [CONFIRM: is there a phone number to show? If none, the sticky bar carries the
-booking button only.]
+**Phone line.** None. The sticky bar carries the booking button only.
 
 **Nav.** How it works / Open markets / Book your free audit (button)
 
@@ -109,14 +108,14 @@ Visible word counts (2026-10-04): Home 248 of 250, How it works 137 of 200, Open
 
 - Step 1, Free market audit: 30 minutes on who's advertising near you and what your ads and follow-up are doing now.
 - Step 2, Build: Landing page, tracking and automatic follow-up go in before a dollar of ad spend.
-- Step 3, Launch: Google and Facebook ads go live, with the first $500 on me. [CONFIRM: still live by day 8?]
+- Step 3, Launch: Google and Facebook ads go live by day 8, with the first $500 on me.
 - Step 4, Optimize: I check the numbers every day and cut ads that don't earn their keep.
 - Step 5, Scale: Budget goes up in small steps, only while your cost per job holds steady.
 
 - Section heading: What you get along the way
-- Item: A report every [CONFIRM: day of the week] showing what ran, what worked and what's next.
+- Item: A report every Monday showing what ran, what worked and what's next.
 - Item: A strategy call every two weeks.
-- Item: Your own ad accounts. You keep them if we ever part ways. [CONFIRM: true?]
+- Item: Your own ad accounts. You keep them if we ever part ways.
 
 - Closing heading: Start with the audit
 - Button: Book your free audit
@@ -125,21 +124,20 @@ Visible word counts (2026-10-04): Home 248 of 250, How it works 137 of 200, Open
 
 - Headline (H1): Check if your market is still open
 - Body: I work with one shop per service in each market. A wrap shop and a tint shop can share a city. Two wrap shops can't.
-- Map caption: Dots mark the 50 largest US metro areas. Green means open for every service.
-- Taken markets: [CONFIRM: which metro and service pairs show as taken, e.g. "Tampa: wraps"]
+- Map caption: Dots mark the 50 largest US metro areas. I confirm your market on the call.
 - Body: Don't see your city? Most smaller markets are open too. Ask me on the call.
 - Button: Claim your market
 
 Map data rule: the 50 metros come from the US Census Bureau metro population list, not picked by
-hand. Every dot reads "open" unless it is on the confirmed taken list above.
+hand. No dot is marked taken: the owner does not reveal live accounts (2026-10-04).
 
 ## Page 4: Book (ceiling 60)
 
 - Headline (H1): Book your free market audit
-- Sub-headline: 30 minutes. [CONFIRM: by phone, Zoom, or either?]
+- Sub-headline: 30 minutes, on Zoom or the phone.
 - Calendar: existing GHL booking widget (cPecftm7zMOwaY1YJ7Pg)
 - Line: Rather email? izaiah@torqcrm.com
-- Line shown after booking: You're booked. [CONFIRM: does the calendar send a text or email confirmation?]
+- Line shown after booking: You're booked. See you on the call.
 
 ## Page 5: Privacy and Terms
 
@@ -150,14 +148,14 @@ is actually installed (Microsoft Clarity, the GHL calendar and form, YouTube emb
 
 | # | Marker | Page | Section | Answer | Closed |
 |---|--------|------|---------|--------|--------|
-| 1 | Phone number to show, or none? | Shared | Phone line, sticky bar | | |
+| 1 | Phone number to show, or none? | Shared | Phone line, sticky bar | None (default, owner may override) | 2026-10-04 |
 | 2 | Photo of Izaiah: which one, where, when? | Home | Founder | | |
-| 3 | Are ads still live by day 8? | How it works | Step 3 | | |
-| 4 | Which day does the weekly report go out? | How it works | What you get | | |
-| 5 | Clients keep their own ad accounts if they leave? | How it works | What you get | | |
-| 6 | Which metro and service pairs show as taken? | Open markets | Map | | |
-| 7 | Audit call by phone, Zoom, or either? | Book | Sub-headline | | |
-| 8 | Does the calendar send a text or email confirmation? | Book | After booking | | |
+| 3 | Are ads still live by day 8? | How it works | Step 3 | Yes | 2026-10-04 |
+| 4 | Which day does the weekly report go out? | How it works | What you get | Monday | 2026-10-04 |
+| 5 | Clients keep their own ad accounts if they leave? | How it works | What you get | Yes | 2026-10-04 |
+| 6 | Which metro and service pairs show as taken? | Open markets | Map | None shown (no live accounts revealed) | 2026-10-04 |
+| 7 | Audit call by phone, Zoom, or either? | Book | Sub-headline | Either | 2026-10-04 |
+| 8 | Does the calendar send a confirmation? | Book | After booking | Line rewritten to make no claim | 2026-10-04 |
 
 ## Copy rules lint (run 2026-10-04)
 
@@ -171,6 +169,6 @@ is actually installed (Microsoft Clarity, the GHL calendar and form, YouTube emb
 ## Approval
 
 Owner name: Izaiah Jackson
-Approved on: [DATE]
-Approved by: [WHERE THE YES IS RECORDED]
-Open markers at approval: [N]
+Approved on: 2026-10-04
+Approved by: owner in the Claude Code session, 2026-10-04
+Open markers at approval: 1 (photo of Izaiah; design uses a labelled placeholder until it arrives)
