@@ -1,0 +1,32 @@
+# keep-list.txt
+#
+# Files and folders that must survive every re-export.
+# scripts/export-transform.mjs copies each line into dist/ untouched, every run.
+#
+# One path per line, relative to the project root (the folder holding site/ and dist/).
+# A line starting with # is a comment. Blank lines are ignored.
+# End-of-line comments do NOT work: "assets/logo.png  # the logo" is read as a
+# filename with spaces in it and the build fails saying it cannot find it.
+# A path that ends in / is copied as a whole folder, recursively.
+#
+# The build EXITS 1 if a path listed here does not exist. That is on purpose:
+# a keep-list file that quietly disappeared is how a hero animation stops shipping.
+#
+# Anything you or Claude built that the design tool did not know about goes here.
+# Uncomment the lines you actually use and add your own.
+#
+# KAIRO NOTE: the two private video pages (/watch and /message) and the assets they
+# use are wired in step 3, once site/ holds the new export. Until then nothing is
+# listed here, so the build does not fail on paths that are still being moved.
+
+# motion/frame-loader.js
+# motion/frames/
+# site.js
+# favicon.ico
+# favicon.svg
+# apple-touch-icon.png
+# site.webmanifest
+# .well-known/
+# googleXXXXXXXXXXXX.html
+# BingSiteAuth.xml
+# [indexnow-key].txt
