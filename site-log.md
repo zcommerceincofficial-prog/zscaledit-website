@@ -43,3 +43,10 @@ START LINE (derived from the 2026-10-04 session, not typed by the owner):
             Exclusivity one shop per service per market. Never say: lead-gen, cheap/budget.
             templates/copy-doc.md v1 written: 4 pages + legal, 248/137/65/14 visible words, 0 em
             dashes, 8 open markers. Awaiting owner approval.
+2026-10-04  Production deploy e2b30093 (commit 4925c49, branch fix-2026-10-04-www-redirect, pushed to
+            GitHub main): added functions/_middleware.js, one 301 from www.zscaledit.site to the
+            apex with path and query kept. Site content byte-identical to the previous deploy
+            (probe: index sha 7f69430eb5 before and after). Owner's go: "push it live".
+            www custom domain was "deactivated"; re-validation started, Cloudflare reports
+            "CNAME record not set". Waiting on owner to point the www DNS record at
+            zscaledit-website.pages.dev (wrangler OAuth has no DNS scope). www returns 522 until then.
