@@ -15,9 +15,14 @@
 # Anything you or Claude built that the design tool did not know about goes here.
 # Uncomment the lines you actually use and add your own.
 #
-# KAIRO NOTE: the two private video pages (/watch and /message) and the assets they
-# use are wired in step 3, once site/ holds the new export. Until then nothing is
-# listed here, so the build does not fail on paths that are still being moved.
+# KAIRO: the two private video pages (noindexed through _headers by kairo-build.mjs),
+# the assets they and the favicons use, and the root files the old site served.
+assets/
+watch/
+message/
+favicon.ico
+site.webmanifest
+ads.txt
 
 # motion/frame-loader.js
 # motion/frames/

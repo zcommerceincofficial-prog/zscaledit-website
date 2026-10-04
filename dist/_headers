@@ -1,0 +1,43 @@
+# Written by scripts/export-transform.mjs. Edit the script, not this file.
+# Cloudflare Pages reads this file as-is. On Vercel, copy these rules into
+# vercel.json under "headers".
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+
+# HTML: short cache, so a new content hash reaches everyone within minutes
+/*.html
+  Cache-Control: public, max-age=300
+
+# stable filenames, cache-busted with ?v=<hash> by scripts/cache-stamp.mjs
+/src/*
+  Cache-Control: public, max-age=0, must-revalidate
+/styles/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+# immutable: a changed image gets a NEW FILENAME, never a re-upload
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Added by scripts/kairo-build.mjs
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+# private video pages: never in search
+/watch
+  X-Robots-Tag: noindex, nofollow
+/watch/*
+  X-Robots-Tag: noindex, nofollow
+/message
+  X-Robots-Tag: noindex, nofollow
+/message/*
+  X-Robots-Tag: noindex, nofollow
+
+# stable filenames busted with ?v=<hash>
+/tokens.css
+  Cache-Control: public, max-age=0, must-revalidate
+/wiring/*
+  Cache-Control: public, max-age=0, must-revalidate

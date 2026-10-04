@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Book your free audit | Kairo</title>
+<meta name="description" content="Book your free market audit. 30 minutes, on Zoom or the phone.">
+<link rel="canonical" href="https://zscaledit.site/book">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Book your free market audit">
+<meta property="og:description" content="Book your free market audit. 30 minutes, on Zoom or the phone.">
+<meta property="og:url" content="https://zscaledit.site/book">
+<meta property="og:image" content="https://zscaledit.site/og-image.png">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Fira+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+</helmet>
+
+<header style="display:flex;align-items:flex-start;justify-content:space-between;gap:var(--s-4);padding:0 var(--gutter) var(--s-2)">
+  <a href="index.dc.html" style="display:flex;align-items:flex-end;background:var(--ink);padding:var(--s-5) var(--s-2) var(--s-2);min-height:44px"><img src="kairo-logo-full-transparent.png" alt="Kairo" width="49" height="40" style="display:block;height:40px;width:auto"></a>
+  <nav style="display:flex;align-items:center;gap:var(--s-5);padding-top:var(--s-4)">
+    <a href="how-it-works.dc.html" style="display:flex;align-items:center;min-height:44px;font-size:var(--fs-body);text-decoration:none">How it works</a>
+    <a href="open-markets.dc.html" style="display:flex;align-items:center;min-height:44px;font-size:var(--fs-body);text-decoration:none">Open markets</a>
+    <a href="book.dc.html" aria-current="page" onClick="{{ press_nav }}" aria-busy="{{ busy.nav }}" style="display:var(--desk-flex);position:relative;overflow:hidden;align-items:center;min-height:44px;padding:0 var(--s-4);background:var(--accent);color:var(--on-accent);font-weight:600;font-size:var(--fs-body);text-decoration:none;border-radius:var(--r-control);transition:transform var(--t-feedback) var(--ease)" style-hover="transform:translateY(-2px);color:var(--on-accent)" style-active="transform:scale(0.97)">Book your free audit<span aria-hidden="true" style="position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--on-accent);transform-origin:left;transform:{{ bars.nav }};transition:transform var(--t-layout) var(--ease)"></span></a>
+  </nav>
+</header>
+
+<main>
+  <section data-screen-label="01 Header" style="padding-top:var(--s-6)">
+    <div style="position:relative;overflow:hidden;isolation:isolate;width:var(--panel-w);background:var(--surface);padding:var(--pad-panel-y) var(--pad-panel-x) var(--pad-panel-y) var(--gutter);display:flex;flex-direction:column;gap:var(--s-4)">
+      <svg aria-hidden="true" viewBox="0 0 720 380" preserveAspectRatio="xMaxYMax slice" style="position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none"><g fill="none" style="stroke:var(--hairline)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"><path d="M560 420 H470 V70 H860 V420"></path><path d="M640 330 H560 V160 H760 V330 H700"></path></g></svg>
+      <h1 style="font-size:var(--fs-h1);line-height:var(--lh-h1);color:var(--ink);max-width:12ch">Book your free market audit</h1>
+      <p style="font-size:var(--fs-lead);line-height:var(--lh-lead);color:var(--ink)"><span style="font-variant-numeric:tabular-nums">30</span> minutes, on Zoom or the phone.</p>
+    </div>
+  </section>
+
+  <section data-screen-label="02 Calendar" style="padding:var(--s-7) var(--gutter) var(--gap-short);display:flex;flex-direction:column;gap:var(--s-4);max-width:60rem">
+    <p aria-live="polite" style="min-height:1.6em;color:var(--accent);font-weight:500"><sc-if value="{{ booked }}" hint-placeholder-val="{{ false }}">You're booked. See you on the call.</sc-if></p>
+    <div id="booking-widget" style="min-height:640px"></div>
+    <p style="color:var(--muted)">Rather email? <a href="mailto:izaiah@torqcrm.com" style="display:inline-flex;align-items:center;min-height:44px;color:var(--ink)">izaiah@torqcrm.com</a></p>
+  </section>
+
+  <ul style="list-style:none;padding:var(--s-5) var(--gutter);display:flex;flex-wrap:wrap;gap:var(--s-3) var(--s-7);border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline)">
+    <li style="display:flex;align-items:center;gap:var(--s-3);color:var(--muted)"><span aria-hidden="true" style="width:6px;height:6px;background:var(--accent);flex:none"></span><span>First <span style="font-variant-numeric:tabular-nums">$500</span> in ad spend on me</span></li>
+    <li style="display:flex;align-items:center;gap:var(--s-3);color:var(--muted)"><span aria-hidden="true" style="width:6px;height:6px;background:var(--accent);flex:none"></span><span>One shop per service in each market</span></li>
+    <li style="display:flex;align-items:center;gap:var(--s-3);color:var(--muted)"><span aria-hidden="true" style="width:6px;height:6px;background:var(--accent);flex:none"></span><span>Every account run by the founder</span></li>
+  </ul>
+</main>
+
+<footer style="border-top:1px solid var(--hairline);padding:var(--s-7) var(--gutter) var(--sticky-space);display:flex;flex-wrap:wrap;gap:var(--s-5) var(--s-8);align-items:flex-start">
+  <p style="flex:1 1 18rem;color:var(--muted);max-width:28em">Kairo. Ads and follow-up for auto aftermarket shops. United States only.</p>
+  <nav style="flex:2 1 24rem;display:flex;flex-wrap:wrap;gap:0 var(--s-5);align-items:center">
+    <a href="mailto:izaiah@torqcrm.com" style="display:flex;align-items:center;min-height:44px">izaiah@torqcrm.com</a>
+    <a href="how-it-works.dc.html" style="display:flex;align-items:center;min-height:44px;color:var(--muted)">How it works</a>
+    <a href="open-markets.dc.html" style="display:flex;align-items:center;min-height:44px;color:var(--muted)">Open markets</a>
+    <a href="book.dc.html" style="display:flex;align-items:center;min-height:44px;color:var(--muted)">Book</a>
+    <a href="/privacy" style="display:flex;align-items:center;min-height:44px;color:var(--muted)">Privacy</a>
+    <a href="/terms" style="display:flex;align-items:center;min-height:44px;color:var(--muted)">Terms</a>
+    <span style="display:flex;align-items:center;min-height:44px;color:var(--muted)">(c) 2026 Kairo</span>
+  </nav>
+</footer>
+
+<div style="display:var(--phone-flex);position:fixed;left:0;right:0;bottom:0;z-index:50;padding:var(--s-3) var(--gutter) calc(var(--s-3) + env(safe-area-inset-bottom));background:var(--canvas);border-top:1px solid var(--hairline)">
+  <a href="#booking-widget" onClick="{{ press_sticky }}" aria-busy="{{ busy.sticky }}" style="flex:1;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;gap:var(--s-3);min-height:52px;background:var(--accent);color:var(--on-accent);font-weight:600;font-size:var(--fs-body);text-decoration:none;border-radius:var(--r-control);transition:transform var(--t-feedback) var(--ease)" style-active="transform:scale(0.97)" style-hover="color:var(--on-accent)">
+    <span>Book your free audit</span>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h18m0 0l-8.5-8.5M21 12l-8.5 8.5"></path></svg>
+    <span aria-hidden="true" style="position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--on-accent);transform-origin:left;transform:{{ bars.sticky }};transition:transform var(--t-layout) var(--ease)"></span>
+  </a>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { pressed: null, booked: /[?&]booked=1/.test(window.location.search) };
+  componentDidMount() {
+    this.onShow = () => this.setState({ pressed: null });
+    window.addEventListener('pageshow', this.onShow);
+    this.onMsg = (e) => {
+      let s = '';
+      try { s = typeof e.data === 'string' ? e.data : JSON.stringify(e.data); } catch (err) { return; }
+      if (/(appointment|booking)[^a-z]{0,24}(booked|confirmed|created|success)/i.test(s)) this.setState({ booked: true });
+    };
+    window.addEventListener('message', this.onMsg);
+  }
+  componentWillUnmount() { window.removeEventListener('pageshow', this.onShow); window.removeEventListener('message', this.onMsg); }
+
+  press = (key) => (e) => {
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const href = e.currentTarget.getAttribute('href');
+    e.preventDefault();
+    this.setState({ pressed: key });
+    setTimeout(() => { window.location.href = href; if (href.charAt(0) === '#') this.setState({ pressed: null }); }, 380);
+  };
+  pressVals(keys) {
+    const bars = {}, busy = {}, out = {};
+    keys.forEach((k) => {
+      bars[k] = this.state.pressed === k ? 'scaleX(1)' : 'scaleX(0)';
+      busy[k] = this.state.pressed === k ? 'true' : 'false';
+      out['press_' + k] = this.press(k);
+    });
+    return Object.assign(out, { bars, busy });
+  }
+  renderVals() {
+    return Object.assign({ booked: this.state.booked }, this.pressVals(['nav', 'sticky']));
+  }
+}
+</script>
+</body>
+</html>

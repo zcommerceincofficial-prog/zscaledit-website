@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Kairo | Ads and follow-up for auto aftermarket shops</title>
+<meta name="description" content="Kairo runs Google and Facebook ads, landing pages and automatic lead follow-up for auto aftermarket shops across the United States.">
+<link rel="canonical" href="https://zscaledit.site/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="More booked jobs for auto aftermarket shops.">
+<meta property="og:description" content="Kairo runs Google and Facebook ads, landing pages and automatic lead follow-up for auto aftermarket shops across the United States.">
+<meta property="og:url" content="https://zscaledit.site/">
+<meta property="og:image" content="https://zscaledit.site/og-image.png">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Fira+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<script src="market-data.js"></script>
+</helmet>
+
+<header style="display:flex;align-items:flex-start;justify-content:space-between;gap:var(--s-4);padding:0 var(--gutter) var(--s-2)">
+  <a href="index.dc.html" aria-current="page" style="display:flex;align-items:flex-end;background:var(--ink);padding:var(--s-5) var(--s-2) var(--s-2);min-height:44px"><img src="kairo-logo-full-transparent.png" alt="Kairo" width="49" height="40" style="display:block;height:40px;width:auto"></a>
+  <nav style="display:flex;align-items:center;gap:var(--s-5);padding-top:var(--s-4)">
+    <a href="how-it-works.dc.html" style="display:flex;align-items:center;min-height:44px;font-size:var(--fs-body);text-decoration:none">How it works</a>
+    <a href="open-markets.dc.html" style="display:flex;align-items:center;min-height:44px;font-size:var(--fs-body);text-decoration:none">Open markets</a>
+    <a href="book.dc.html" onClick="{{ pressNav }}" aria-busy="{{ busy.nav }}" style="display:var(--desk-flex);position:relative;overflow:hidden;align-items:center;min-height:44px;padding:0 var(--s-4);background:var(--accent);color:var(--on-accent);font-weight:600;font-size:var(--fs-body);text-decoration:none;border-radius:var(--r-control);transition:transform var(--t-feedback) var(--ease)" style-hover="transform:translateY(-2px);color:var(--on-accent)" style-active="transform:scale(0.97)">Book your free audit<span aria-hidden="true" style="position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--on-accent);transform-origin:left;transform:{{ bars.nav }};transition:transform var(--t-layout) var(--ease)"></span></a>
+  </nav>
+</header>
+
+<main>
+  <section data-screen-label="01 Hero" style="display:flex;flex-wrap:wrap;align-items:flex-end;padding-top:var(--s-6)">
+    <div style="position:relative;overflow:hidden;isolation:isolate;flex:1 1 34rem;max-width:100%;background:var(--surface);padding:var(--pad-panel-y) var(--pad-panel-x) var(--pad-panel-y) var(--gutter);display:flex;flex-direction:column;gap:var(--s-5);margin-right:var(--panel-inset)">
+      <svg aria-hidden="true" viewBox="0 0 720 380" preserveAspectRatio="xMaxYMid slice" style="position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none"><path d="M-20 350 H380 V270 H470 V350 H520 L680 120" fill="none" style="stroke:var(--hairline)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"></path><path d="M732 46 L656 84 L706 118 Z" style="fill:var(--hairline);stroke:var(--hairline)" stroke-width="6" stroke-linejoin="round"></path></svg>
+      <h1 style="font-size:var(--fs-display);line-height:var(--lh-display);color:var(--ink);max-width:14ch">More booked jobs for auto aftermarket shops.</h1>
+      <p style="font-size:var(--fs-lead);line-height:var(--lh-lead);color:var(--ink);max-width:28em">You already run ads. I build the system behind them, so more clicks turn into paid jobs.</p>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:var(--s-4) var(--s-6);padding-top:var(--s-2)">
+        <a href="book.dc.html" onClick="{{ pressHero }}" aria-busy="{{ busy.hero }}" style="position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:var(--s-3);min-height:52px;padding:0 var(--s-5);background:var(--accent);color:var(--on-accent);font-weight:600;font-size:var(--fs-body);text-decoration:none;border-radius:var(--r-control);transition:transform var(--t-feedback) var(--ease)" style-hover="transform:translateY(-2px);color:var(--on-accent)" style-active="transform:scale(0.97)">
+          <span>Book your free audit</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h18m0 0l-8.5-8.5M21 12l-8.5 8.5"></path></svg>
+          <span aria-hidden="true" style="position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--on-accent);transform-origin:left;transform:{{ bars.hero }};transition:transform var(--t-layout) var(--ease)"></span>
+        </a>
+        <a href="open-markets.dc.html" style="display:inline-flex;align-items:center;min-height:44px;font-size:var(--fs-body);text-underline-offset:5px">See if your market is open</a>
+      </div>
+    </div>
+    <div style="flex:1 1 24rem;max-width:100%;display:flex;flex-direction:column;align-items:flex-end;padding:var(--s-7) 0 var(--s-4) var(--gutter)">
+      <div ref="{{ mapRef }}" style="position:relative;width:100%;aspect-ratio:1000/630">
+        <svg viewBox="0 0 1000 630" preserveAspectRatio="none" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;display:block"><path d="{{ outline }}" style="fill:var(--surface);stroke:var(--hairline);stroke-width:1" vector-effect="non-scaling-stroke"></path></svg>
+        <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;transform:{{ headTf }};opacity:{{ headOp }};transition:transform calc(var(--t-entrance) * 2) var(--ease), opacity var(--t-state) var(--ease)"><span style="position:absolute;top:-12px;bottom:-12px;left:0;width:1px;background:var(--accent)"></span></div>
+        <div id="market-map" role="list" style="position:absolute;inset:0;overflow:clip;overflow-clip-margin:22px">
+          <sc-for list="{{ dots }}" as="d" hint-placeholder-count="0">
+            <button type="button" role="listitem" data-metro="{{ d.name }}" aria-label="{{ d.name }}" aria-pressed="{{ d.on }}" onClick="{{ d.select }}" onFocus="{{ d.select }}" onMouseEnter="{{ d.select }}" style="position:absolute;left:{{ d.left }};top:{{ d.top }};width:44px;height:44px;margin:-22px 0 0 -22px;padding:0;border:0;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center">
+              <span style="display:block;width:var(--dot);height:var(--dot);border-radius:50%;background:var(--accent);opacity:{{ d.op }};transform:{{ d.tf }};transition:opacity var(--t-entrance) var(--ease) {{ d.delay }}, transform var(--t-state) var(--ease) {{ d.delay }}"></span>
+            </button>
+          </sc-for>
+        </div>
+      </div>
+      <p aria-live="polite" style="align-self:stretch;min-height:3.2em;padding:var(--s-3) var(--gutter) 0 0;font-size:var(--fs-body);line-height:var(--lh-label);display:flex;flex-wrap:wrap;gap:0 var(--s-3)">
+        <sc-if value="{{ hasSel }}" hint-placeholder-val="{{ false }}"><span style="color:var(--ink);font-weight:500">{{ selName }}</span><span style="color:var(--accent)">Ask me if your service is open there.</span></sc-if>
+      </p>
+    </div>
+  </section>
+
+  <ul style="list-style:none;padding:var(--s-5) var(--gutter);display:flex;flex-wrap:wrap;gap:var(--s-3) var(--s-7);border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline)">
+    <li style="display:flex;align-items:center;gap:var(--s-3);color:var(--muted)"><span aria-hidden="true" style="width:6px;height:6px;background:var(--accent);flex:none"></span><span>First <span style="font-variant-numeric:tabular-nums">$500</span> in ad spend on me</span></li>
+    <li style="display:flex;align-items:center;gap:var(--s-3);color:var(--muted)"><span aria-hidden="true" style="width:6px;height:6px;background:var(--accent);flex:none"></span><span>One shop per service in each market</span></li>
+    <li style="display:flex;align-items:center;gap:var(--s-3);color:var(--muted)"><span aria-hidden="true" style="width:6px;height:6px;background:var(--accent);flex:none"></span><span>Every account run by the founder</span></li>
+  </ul>
+
+  <section data-screen-label="02 Five kinds of shops" style="padding:var(--gap-section) var(--gutter) 0;display:flex;flex-direction:column;gap:var(--s-6)">
+    <h2 style="font-size:var(--fs-h2);line-height:var(--lh-h2);color:var(--ink)">Built for five kinds of shops</h2>
+    <ul style="list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,9rem),1fr));gap:0 var(--s-5)">
+      <li style="border-top:1px solid var(--hairline);padding:var(--s-3) 0 var(--s-4);color:var(--ink)">Vehicle wraps</li>
+      <li style="border-top:1px solid var(--hairline);padding:var(--s-3) 0 var(--s-4);color:var(--ink)">Paint protection film</li>
+      <li style="border-top:1px solid var(--hairline);padding:var(--s-3) 0 var(--s-4);color:var(--ink)">Window tint</li>
+      <li style="border-top:1px solid var(--hairline);padding:var(--s-3) 0 var(--s-4);color:var(--ink)">Auto glass</li>
+      <li style="border-top:1px solid var(--hairline);padding:var(--s-3) 0 var(--s-4);color:var(--ink)">Detailing and ceramic coating</li>
+    </ul>
+  </section>
+
+  <section data-screen-label="03 Clicks and gaps" style="padding-top:var(--gap-section)">
+    <div style="position:relative;overflow:hidden;isolation:isolate;margin-left:var(--panel-shift);background:var(--surface);padding:var(--pad-panel-y) var(--gutter) var(--pad-panel-y) var(--pad-panel-x);display:flex;flex-direction:column;gap:var(--s-4)">
+      <svg aria-hidden="true" viewBox="0 0 720 380" preserveAspectRatio="xMaxYMax slice" style="position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none"><g fill="none" style="stroke:var(--hairline)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"><path d="M560 420 H470 V70 H860 V420"></path><path d="M640 330 H560 V160 H760 V330 H700"></path></g></svg>
+      <h2 style="font-size:var(--fs-h1);line-height:var(--lh-h1);color:var(--ink);max-width:14ch">You get clicks. The bays still have gaps.</h2>
+      <p style="color:var(--ink);max-width:var(--measure)">Boosted posts and a Google campaign you built yourself bring some leads. Most go cold because nobody texts back fast, and you can't see which ad paid for which job.</p>
+    </div>
+  </section>
+
+  <section data-screen-label="04 What I build" style="padding:var(--gap-section) var(--gutter) 0;display:flex;flex-wrap:wrap;gap:var(--s-5) var(--s-8)">
+    <h2 style="flex:1 1 14rem;font-size:var(--fs-h2);line-height:var(--lh-h2);color:var(--ink)">What I build for your shop</h2>
+    <ul style="flex:2.3 1 26rem;list-style:none;padding:0;display:flex;flex-direction:column;border-bottom:1px solid var(--hairline)">
+      <li style="border-top:1px solid var(--hairline);padding:var(--s-4) 0;color:var(--ink);max-width:var(--measure)">Google and Facebook ads aimed at people shopping for your service.</li>
+      <li style="border-top:1px solid var(--hairline);padding:var(--s-4) 0;color:var(--ink);max-width:var(--measure)">A landing page for your offer, built for phones.</li>
+      <li style="border-top:1px solid var(--hairline);padding:var(--s-4) 0;color:var(--ink);max-width:var(--measure)">Text and email follow-up that fires the moment a lead comes in.</li>
+      <li style="border-top:1px solid var(--hairline);padding:var(--s-4) 0;color:var(--ink);max-width:var(--measure)">Tracking from the first click to the paid invoice.</li>
+    </ul>
+  </section>
+
+  <section data-screen-label="05 First $500" style="position:relative;overflow:hidden;isolation:isolate;margin-top:var(--gap-section);background:var(--surface);padding:var(--s-9) var(--gutter);display:flex;flex-direction:column;gap:var(--s-5)">
+      <svg aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none"><defs><pattern id="tile-index2" width="56" height="56" patternUnits="userSpaceOnUse"><g fill="none" style="stroke:var(--hairline)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M24 48 H8 V8 H48 V48"></path><path d="M28 38 H18 V18 H38 V38 H34"></path></g></pattern><radialGradient id="fade-index2" cx="100%" cy="0%" r="80%"><stop offset="0" stop-color="#F2F5F0" stop-opacity="1"></stop><stop offset="1" stop-color="#F2F5F0" stop-opacity="0"></stop></radialGradient><mask id="mask-index2"><rect width="100%" height="100%" fill="url(#fade-index2)"></rect></mask></defs><rect width="100%" height="100%" fill="url(#tile-index2)" mask="url(#mask-index2)"></rect></svg>
+    <h2 style="font-size:var(--fs-display);line-height:var(--lh-display);color:var(--ink);max-width:13ch">Your first <span style="font-family:var(--f-body);font-weight:500;font-variant-numeric:tabular-nums lining-nums;letter-spacing:-0.01em">$500</span> in ad spend is on me.</h2>
+    <p style="font-size:var(--fs-lead);line-height:var(--lh-lead);color:var(--ink);max-width:28em">If we're a fit and you sign on, I put the first <span style="font-variant-numeric:tabular-nums">$500</span> into your campaigns.</p>
+  </section>
+
+  <section data-screen-label="06 One shop per service" style="padding:var(--gap-short) var(--gutter);display:flex;flex-wrap:wrap;align-items:baseline;gap:var(--s-3) var(--s-8);border-bottom:1px solid var(--hairline)">
+    <h2 style="flex:1 1 20rem;font-size:var(--fs-h2);line-height:var(--lh-h2);color:var(--ink)">One shop per service in each market.</h2>
+    <div style="flex:1.4 1 22rem;display:flex;flex-direction:column;gap:var(--s-2)">
+      <p style="color:var(--muted);max-width:var(--measure)">If I work with a tint shop in your city, I don't take on another tint shop there.</p>
+      <a href="open-markets.dc.html" style="align-self:flex-start;display:inline-flex;align-items:center;gap:var(--s-2);min-height:44px;text-underline-offset:5px">Check your market<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h18m0 0l-8.5-8.5M21 12l-8.5 8.5"></path></svg></a>
+    </div>
+  </section>
+
+  <section data-screen-label="07 Founder" style="padding-top:var(--gap-section);display:flex;flex-wrap:wrap;align-items:flex-end;gap:var(--s-6) 0">
+    <div style="position:relative;overflow:hidden;isolation:isolate;flex:1 1 30rem;background:var(--surface);padding:var(--pad-panel-y) var(--pad-panel-x) var(--pad-panel-y) var(--gutter);display:flex;flex-direction:column;gap:var(--s-4);margin-right:var(--panel-inset)">
+      <svg aria-hidden="true" viewBox="0 0 720 380" preserveAspectRatio="xMaxYMid slice" style="position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none"><path d="M-20 350 H380 V270 H470 V350 H520 L680 120" fill="none" style="stroke:var(--hairline)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"></path><path d="M732 46 L656 84 L706 118 Z" style="fill:var(--hairline);stroke:var(--hairline)" stroke-width="6" stroke-linejoin="round"></path></svg>
+      <h2 style="font-size:var(--fs-h1);line-height:var(--lh-h1);color:var(--ink);max-width:13ch">I'm Izaiah. I run every account myself.</h2>
+      <p style="color:var(--ink);max-width:var(--measure)">I've spent years running paid ads for local service shops. You talk to me, not an account manager.</p>
+    </div>
+    <div style="flex:0 1 24rem;display:flex;justify-content:flex-end;margin-left:auto;padding-left:var(--gutter)">
+      <figure style="width:var(--frame-w);aspect-ratio:4/5;border:1px solid var(--hairline);border-right:0;background:var(--canvas);display:flex;align-items:flex-end;padding:var(--s-5)">
+        <figcaption style="font-size:var(--fs-label);line-height:var(--lh-label);color:var(--muted);max-width:22em">[CONFIRM: photo of Izaiah, where and when it was taken]</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section data-screen-label="08 Book" style="padding:var(--gap-section) 0 var(--gap-section)">
+    <div style="position:relative;overflow:hidden;isolation:isolate;margin-right:var(--panel-shift);background:var(--surface);padding:var(--pad-panel-y) var(--pad-panel-x) var(--pad-panel-y) var(--gutter);display:flex;flex-direction:column;gap:var(--s-5)">
+      <svg aria-hidden="true" viewBox="0 0 720 380" preserveAspectRatio="xMaxYMax slice" style="position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none"><g fill="none" style="stroke:var(--hairline)" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"><path d="M560 420 H470 V70 H860 V420"></path><path d="M640 330 H560 V160 H760 V330 H700"></path></g></svg>
+      <h2 style="font-size:var(--fs-h1);line-height:var(--lh-h1);color:var(--ink);max-width:12ch">Book your free market audit</h2>
+      <p style="color:var(--ink);max-width:var(--measure)"><span style="font-variant-numeric:tabular-nums">30</span> minutes on your market, your ads and your follow-up. You keep the plan, hire me or not.</p>
+      <a href="book.dc.html" onClick="{{ pressClose }}" aria-busy="{{ busy.close }}" style="align-self:flex-start;position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:var(--s-3);min-height:52px;padding:0 var(--s-5);background:var(--accent);color:var(--on-accent);font-weight:600;font-size:var(--fs-body);text-decoration:none;border-radius:var(--r-control);transition:transform var(--t-feedback) var(--ease)" style-hover="transform:translateY(-2px);color:var(--on-accent)" style-active="transform:scale(0.97)">
+        <span>Book your free audit</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h18m0 0l-8.5-8.5M21 12l-8.5 8.5"></path></svg>
+        <span aria-hidden="true" style="position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--on-accent);transform-origin:left;transform:{{ bars.close }};transition:transform var(--t-layout) var(--ease)"></span>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer style="border-top:1px solid var(--hairline);padding:var(--s-7) var(--gutter) var(--sticky-space);display:flex;flex-wrap:wrap;gap:var(--s-5) var(--s-8);align-items:flex-start">
+  <p style="flex:1 1 18rem;color:var(--muted);max-width:28em">Kairo. Ads and follow-up for auto aftermarket shops. United States only.</p>
+  <nav style="flex:2 1 24rem;display:flex;flex-wrap:wrap;gap:0 var(--s-5);align-items:center">
+    <a href="mailto:izaiah@torqcrm.com" style="display:flex;align-items:center;min-height:44px">izaiah@torqcrm.com</a>
+    <a href="how-it-works.dc.html" style="display:flex;align-items:center;min-height:44px;color:var(--muted)">How it works</a>
+    <a href="open-markets.dc.html" style="display:flex;align-items:center;min-height:44px;color:var(--muted)">Open markets</a>
+    <a href="book.dc.html" style="display:flex;align-items:center;min-height:44px;color:var(--muted)">Book</a>
+    <a href="/privacy" style="display:flex;align-items:center;min-height:44px;color:var(--muted)">Privacy</a>
+    <a href="/terms" style="display:flex;align-items:center;min-height:44px;color:var(--muted)">Terms</a>
+    <span style="display:flex;align-items:center;min-height:44px;color:var(--muted)">(c) 2026 Kairo</span>
+  </nav>
+</footer>
+
+<div style="display:var(--phone-flex);position:fixed;left:0;right:0;bottom:0;z-index:50;padding:var(--s-3) var(--gutter) calc(var(--s-3) + env(safe-area-inset-bottom));background:var(--canvas);border-top:1px solid var(--hairline)">
+  <a href="book.dc.html" onClick="{{ pressSticky }}" aria-busy="{{ busy.sticky }}" style="flex:1;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;gap:var(--s-3);min-height:52px;background:var(--accent);color:var(--on-accent);font-weight:600;font-size:var(--fs-body);text-decoration:none;border-radius:var(--r-control);transition:transform var(--t-feedback) var(--ease)" style-active="transform:scale(0.97)" style-hover="color:var(--on-accent)">
+    <span>Book your free audit</span>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h18m0 0l-8.5-8.5M21 12l-8.5 8.5"></path></svg>
+    <span aria-hidden="true" style="position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--on-accent);transform-origin:left;transform:{{ bars.sticky }};transition:transform var(--t-layout) var(--ease)"></span>
+  </a>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { pressed: null, ready: !!window.KAIRO_MAP, lit: false, swept: false, sel: null };
+  mapRef = React.createRef();
+
+  componentDidMount() {
+    const wait = () => {
+      if (!window.KAIRO_MAP) { this.t = setTimeout(wait, 40); return; }
+      this.setState({ ready: true }, this.observe);
+    };
+    wait();
+    this.onShow = () => this.setState({ pressed: null });
+    window.addEventListener('pageshow', this.onShow);
+  }
+  componentWillUnmount() {
+    clearTimeout(this.t); clearTimeout(this.t2);
+    if (this.io) this.io.disconnect();
+    window.removeEventListener('pageshow', this.onShow);
+  }
+  observe = () => {
+    const el = this.mapRef.current;
+    const light = () => {
+      this.setState({ lit: true });
+      this.t2 = setTimeout(() => this.setState((s) => ({ swept: true, sel: s.sel || window.KAIRO_MAP.METROS[0][0] })), 1700);
+    };
+    if (!el || !('IntersectionObserver' in window)) { light(); return; }
+    this.io = new IntersectionObserver((es) => {
+      if (es.some((e) => e.isIntersecting)) { this.io.disconnect(); light(); }
+    }, { threshold: 0.3 });
+    this.io.observe(el);
+  };
+  press = (key) => (e) => {
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const href = e.currentTarget.getAttribute('href');
+    e.preventDefault();
+    this.setState({ pressed: key });
+    setTimeout(() => { window.location.href = href; }, 380);
+  };
+
+
+  // time fraction at which the shared easing curve reaches progress p, so each dot lights as the plotter head passes it
+  inv(p) {
+    if (!this._lut) {
+      const bz = (t, a, b) => 3 * a * t * (1 - t) * (1 - t) + 3 * b * t * t * (1 - t) + t * t * t;
+      this._lut = [];
+      for (let i = 0; i <= 200; i++) { const t = i / 200; this._lut.push([bz(t, 0.16, 0.3), bz(t, 1, 1)]); }
+    }
+    for (let i = 0; i < this._lut.length; i++) if (this._lut[i][1] >= p) return this._lut[i][0];
+    return 1;
+  }
+  renderVals() {
+    const { pressed, lit, swept, sel } = this.state;
+    const M = window.KAIRO_MAP;
+    const keys = ['nav', 'hero', 'close', 'sticky'];
+    const bars = {}, busy = {};
+    keys.forEach((k) => { bars[k] = pressed === k ? 'scaleX(1)' : 'scaleX(0)'; busy[k] = pressed === k ? 'true' : 'false'; });
+    const dots = M ? M.METROS.map(([name, lat, lon]) => {
+      const p = M.project(lat, lon);
+      const on = sel === name;
+      return {
+        name, on: on ? 'true' : 'false',
+        left: p.x.toFixed(2) + '%', top: p.y.toFixed(2) + '%',
+        op: lit ? 1 : 0,
+        tf: !lit ? 'scale(0.2)' : on ? 'scale(1.9)' : 'scale(1)',
+        delay: swept ? '0ms' : 'calc(var(--motion) * ' + Math.round(this.inv(Math.min(1, Math.max(0, p.x / 100))) * 1200) + 'ms)',
+        select: () => this.setState({ sel: name }),
+      };
+    }) : [];
+    return {
+      outline: M ? M.OUTLINE : '',
+      headTf: lit ? 'translateX(100%)' : 'translateX(0)',
+      headOp: lit && !swept ? 1 : 0,
+      dots, mapRef: this.mapRef,
+      hasSel: !!sel, selName: sel || '',
+      bars, busy,
+      pressNav: this.press('nav'), pressHero: this.press('hero'),
+      pressClose: this.press('close'), pressSticky: this.press('sticky'),
+    };
+  }
+}
+</script>
+</body>
+</html>
