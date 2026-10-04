@@ -276,11 +276,15 @@ function run(script, args = []) {
 }
 
 function afterTransform() {
-  fs.appendFileSync(path.join(DIST, '_headers'), `
+  // Cloudflare keeps only ONE block per identical path: a second "/*" block silently
+  // replaces the first. So HSTS goes INTO the transform's "/*" block, never a new one.
+  const hp = path.join(DIST, '_headers');
+  const h = fs.readFileSync(hp, 'utf8');
+  const withHsts = h.replace(/(\n\/\*\n(?:  [^\n]+\n)+)/, '$1  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload\n');
+  if (withHsts === h) die('Could not find the "/*" block in dist/_headers to add HSTS to.');
+  fs.writeFileSync(hp, withHsts);
+  fs.appendFileSync(hp, `
 # Added by scripts/kairo-build.mjs
-/*
-  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
-
 # private video pages: never in search
 /watch
   X-Robots-Tag: noindex, nofollow
