@@ -37,7 +37,10 @@ You are working inside a website repository created from the site kit. The perso
 ## This site, specifically (Kairo on zscaledit.site)
 
 - Owner and builder are the same person: Izaiah. He approves his own copy.
-- The live site is served by Cloudflare Pages project `zscaledit-website`, **direct upload only** (Git Provider: No). Pushing to GitHub does NOT deploy. Deploy is `npx wrangler pages deploy dist --project-name=zscaledit-website --branch=<branch>`.
-- `main` holds what is live today (the private video page). The rebuild lives on branch `rebuild-2026-10` until Izaiah says go.
-- Two private video pages must survive the rebuild, noindexed: `/watch` (60 second intro for social traffic) and `/message` (7 minute video for booked leads, currently the homepage). Both post to a GHL inbound webhook from `assets/js/vsl.js`.
-- The old pre-rebuild files still sit at the repo root (index.html, watch/, privacy.html, terms.html, assets/) until step 3 moves them behind the keep-list.
+- LIVE since 2026-10-04. Cloudflare Pages project `zscaledit-website`, **direct upload only** (Git Provider: No). Pushing to GitHub does NOT deploy.
+- Build: `npm run build` (scripts/kairo-build.mjs: prerender site/ -> .build/static -> export-transform -> dist/ -> cache-stamp). Deploy from the repo root so `functions/` (the www -> apex 301) ships too: `npx wrangler pages deploy dist --project-name=zscaledit-website --branch=<branch>`; `--branch=main` is production.
+- The export is the .dc.html runtime shape. Never ship support.js: content must stay prerendered in the HTML. Motion lives in `wiring/site.js`.
+- Map dots come from `data/census/top50-metros.json`, never the export's placeholders. No dot is ever marked taken.
+- Founder photo: drop it at `wiring/founder.webp` and teach kairo-build.mjs to render it; until then the frame is omitted (never ship the [CONFIRM] caption).
+- `_headers`: Cloudflare keeps ONE block per identical path. Add site-wide headers inside the existing `/*` block, never a second `/*`.
+- Private, noindexed, kept via keep-list: `/watch` (60s social intro) and `/message` (7 min booked-lead video). Both post to a GHL webhook from `assets/js/vsl.js`.

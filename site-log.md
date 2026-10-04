@@ -66,3 +66,21 @@ START LINE (derived from the 2026-10-04 session, not typed by the owner):
             all pass. design/dna-form.md, design/ledger.md row 1, and the assembled prompt
             prompts/claude-design-prompt-kairo.md (3,922 words, 0 em dashes) written. Logo files for
             upload in design/upload/. Waiting on owner's Claude Design session.
+2026-10-04  Claude Design export received (design/exports/2026-10-04-kairo-export.zip): 4 .dc.html runtime
+            pages, DM Serif Display + Fira Sans. Export is the runtime shape (content painted by JS), so
+            scripts/kairo-build.mjs prerenders each page in headless Chrome to static HTML, drops the
+            React/Babel runtime, rebuilds the 3 motion moments in wiring/site.js, swaps the map to the
+            Census Vintage 2024 top-50 metros (data/census/top50-metros.json), wires the GHL calendar,
+            omits the founder photo frame until wiring/founder.webp exists, h3->h2 on the steps, adds
+            JSON-LD (ProfessionalService+Organization, WebSite, WebPage, BreadcrumbList), rebuilds
+            Privacy/Terms in the new shell (domain, email, real tool list). VSL moved to /message,
+            /watch kept; both noindexed via _headers. Owner's go: "generate this site push it live".
+2026-10-04  QA: machine-layer-check live PASS 6/6 pages; mobile-qa at 375x667 6/6 pass after fixing
+            the footer "Book" tap target (37px -> 44px). Build is idempotent (two runs, no diff).
+            Legacy /watch and /message unchanged from before (11px eyebrow, heavy canvas bg).
+2026-10-04  Headers bug found and fixed: a second "/*" block in _headers replaced the first on
+            Cloudflare, dropping X-Frame-Options and Permissions-Policy. HSTS now merged into one block.
+2026-10-04  LIVE. Production deployment 73ae3122 (commit 9ac3e1e), merged to GitHub main (13bac1a).
+            Probe: new title on zscaledit.site, all 6 pages 200, unknown paths 404, www 301 with query kept.
+            Open: test booking (owner), GHL redirect to /book?booked=1, Search Console + Bing sitemap,
+            founder photo, owner to send booked leads /message instead of the homepage.
