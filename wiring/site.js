@@ -12,6 +12,8 @@
   2. How it works: the five steps tick on as status lines when the list scrolls into view.
   3. Primary buttons: a bar fills along the bottom edge, then the page navigates.
   4. Book: "You're booked" line when the URL has ?booked=1 or the calendar posts a booking.
+  5. Referrals: the form sends with fetch and says so in place; without JavaScript it posts
+     normally and /api/referral sends the visitor back with ?sent=1 or ?error=1.
   Copied untouched into dist/ by scripts/kairo-build.mjs. Never edit dist/wiring/site.js.
 */
 (function () {
@@ -171,6 +173,54 @@
     });
   }
 
+  // ---------------------------------------------------------------- 5. referral form
+  function wireReferral(form) {
+    var status = form.querySelector('.ref-status');
+    var button = form.querySelector('button[type="submit"]');
+    var say = function (key) { status.textContent = status.getAttribute('data-' + key + '-text') || ''; };
+    // if the send fails, nothing is lost: a mailto with every field already typed in
+    var fallback = form.querySelector('.ref-fallback');
+    var offerEmail = function () {
+      var lines = [];
+      Array.prototype.forEach.call(form.querySelectorAll('input, select, textarea'), function (el) {
+        if (el.name === 'company_website' || !el.value) return;
+        var label = el.closest('label');
+        var name = label ? (label.firstElementChild && label.firstElementChild.tagName === 'SPAN' ? label.firstElementChild.textContent : label.firstChild.textContent) : el.name;
+        lines.push(name.replace(/\(optional\)/, '').trim() + ': ' + el.value);
+      });
+      var a = fallback.querySelector('a');
+      a.href = 'mailto:izaiah@torqcrm.com?subject=' + encodeURIComponent('Referral') + '&body=' + encodeURIComponent(lines.join('\n'));
+      fallback.hidden = false;
+    };
+    if (/[?&]sent=1/.test(window.location.search)) say('sent');
+    if (/[?&]error=1/.test(window.location.search)) say('error');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var bad = [];
+      Array.prototype.forEach.call(form.querySelectorAll('input, select, textarea'), function (el) {
+        if (el.name === 'company_website') return;
+        var ok = el.checkValidity();
+        el.setAttribute('aria-invalid', ok ? 'false' : 'true');
+        if (!ok) bad.push(el);
+      });
+      if (bad.length) { say('invalid'); bad[0].focus(); return; }
+
+      button.disabled = true;
+      button.setAttribute('aria-busy', 'true');
+      status.textContent = '';
+      fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
+        .then(function (r) { return r.ok ? r.json() : { ok: false }; })
+        .catch(function () { return { ok: false }; })
+        .then(function (res) {
+          button.disabled = false;
+          button.setAttribute('aria-busy', 'false');
+          if (res && res.ok) { form.reset(); fallback.hidden = true; say('sent'); }
+          else { say('error'); offerEmail(); }
+        });
+    });
+  }
+
   function init() {
     Array.prototype.forEach.call(document.querySelectorAll('#market-map'), wireMap);
     var steps = document.querySelector('section[data-screen-label="02 Five steps"] ol');
@@ -178,6 +228,8 @@
     Array.prototype.forEach.call(document.querySelectorAll('a[aria-busy]'), wirePress);
     var widget = document.getElementById('booking-widget');
     if (widget) wireBooked(widget);
+    var referral = document.getElementById('referral-form');
+    if (referral) wireReferral(referral);
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else init();
