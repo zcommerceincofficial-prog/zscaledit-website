@@ -84,3 +84,11 @@ START LINE (derived from the 2026-10-04 session, not typed by the owner):
             Probe: new title on zscaledit.site, all 6 pages 200, unknown paths 404, www 301 with query kept.
             Open: test booking (owner), GHL redirect to /book?booked=1, Search Console + Bing sitemap,
             founder photo, owner to send booked leads /message instead of the homepage.
+2026-10-05  Referral page on branch referral-page, PREVIEW only (deploy 6fb82495,
+            referral-page.zscaledit-website.pages.dev). /referrals: 20% of the monthly fee for the
+            first 3 paid months, fine print, form -> functions/api/referral.js -> GHL inbound webhook
+            from env var REFERRAL_WEBHOOK_URL (NOT SET YET, form returns an error until it is).
+            Footer link on every page, in sitemap. Built in a local clone: the 1TB HD copy is ExFAT
+            (mode-only diffs + ._ files that would upload with dist/). Local test with a mock webhook:
+            valid/missing/honeypot/no-JS all correct. mobile-qa /referrals 8/8 pass. Copy drafted by
+            Claude, awaiting owner approval; production waits on his go + one real test lead in GHL.
