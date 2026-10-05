@@ -178,6 +178,20 @@
     var status = form.querySelector('.ref-status');
     var button = form.querySelector('button[type="submit"]');
     var say = function (key) { status.textContent = status.getAttribute('data-' + key + '-text') || ''; };
+    // if the send fails, nothing is lost: a mailto with every field already typed in
+    var fallback = form.querySelector('.ref-fallback');
+    var offerEmail = function () {
+      var lines = [];
+      Array.prototype.forEach.call(form.querySelectorAll('input, select, textarea'), function (el) {
+        if (el.name === 'company_website' || !el.value) return;
+        var label = el.closest('label');
+        var name = label ? (label.firstElementChild && label.firstElementChild.tagName === 'SPAN' ? label.firstElementChild.textContent : label.firstChild.textContent) : el.name;
+        lines.push(name.replace(/\(optional\)/, '').trim() + ': ' + el.value);
+      });
+      var a = fallback.querySelector('a');
+      a.href = 'mailto:izaiah@torqcrm.com?subject=' + encodeURIComponent('Referral') + '&body=' + encodeURIComponent(lines.join('\n'));
+      fallback.hidden = false;
+    };
     if (/[?&]sent=1/.test(window.location.search)) say('sent');
     if (/[?&]error=1/.test(window.location.search)) say('error');
 
@@ -201,8 +215,8 @@
         .then(function (res) {
           button.disabled = false;
           button.setAttribute('aria-busy', 'false');
-          if (res && res.ok) { form.reset(); say('sent'); }
-          else say('error');
+          if (res && res.ok) { form.reset(); fallback.hidden = true; say('sent'); }
+          else { say('error'); offerEmail(); }
         });
     });
   }

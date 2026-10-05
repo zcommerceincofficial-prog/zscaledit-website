@@ -2,8 +2,8 @@
   <div class="ref-panel">
     <svg aria-hidden="true" viewBox="0 0 720 380" preserveAspectRatio="xMaxYMax slice"><g fill="none" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"><path d="M560 420 H470 V70 H860 V420"></path><path d="M640 330 H560 V160 H760 V330 H700"></path></g></svg>
     <p class="ref-eyebrow">Referral program</p>
-    <h1>Send me a shop. Get paid for 3 months.</h1>
-    <p class="ref-lead">Know a shop owner who wants more booked jobs? Send them my way. If they sign on, you get <strong>20%</strong> of what they pay me each month for their first <span class="num">3</span> months.</p>
+    <h1>Know a business owner? Get paid for 3 months.</h1>
+    <p class="ref-lead">Know someone who wants more customers? Send them my way. If they sign on, you get <strong>20%</strong> of what they pay me each month for their first <span class="num">3</span> months.</p>
     <p><a class="ref-cta" href="#referral-form">Send a referral</a></p>
   </div>
 </section>
@@ -12,10 +12,10 @@
   <h2 id="ref-steps-h">How it works</h2>
   <ol>
     <li><span class="num">01</span><div><h3>You fill out the form</h3><p>Your info and theirs. It takes a couple of minutes.</p></div></li>
-    <li><span class="num">02</span><div><h3>I reach out to them</h3><p>I call them and walk them through a free market audit for their shop.</p></div></li>
+    <li><span class="num">02</span><div><h3>I reach out to them</h3><p>I call them and walk them through a free audit of their business.</p></div></li>
     <li><span class="num">03</span><div><h3>They sign on, you get paid</h3><p>20% of their monthly fee, every month for their first <span class="num">3</span> months.</p></div></li>
   </ol>
-  <p class="ref-example">Say a shop signs on at <span class="num">$1,500</span> a month. That's <span class="num">$300</span> a month to you, or <span class="num">$900</span> over <span class="num">3</span> months.</p>
+  <p class="ref-example">Say a business signs on at <span class="num">$1,500</span> a month. That's <span class="num">$300</span> a month to you, or <span class="num">$900</span> over <span class="num">3</span> months.</p>
 </section>
 
 <section class="ref-rules" aria-labelledby="ref-rules-h">
@@ -23,10 +23,10 @@
   <ul>
     <li>You get 20% of the monthly fee they pay me. Their ad spend doesn't count. That goes straight to Google and Facebook.</li>
     <li>You're paid each month for their first <span class="num">3</span> paid months, after their payment clears. If they cancel early, the payments stop.</li>
-    <li>The shop has to be new to me. If we're already talking, it doesn't count.</li>
-    <li>If two people send the same shop, the first form in gets the credit.</li>
-    <li>I work with one shop per service in each market. If their market is taken, I can't take them on.</li>
-    <li>Wrap, PPF, tint, auto glass and detail shops in the United States.</li>
+    <li>The business has to be new to me. If we're already talking, it doesn't count.</li>
+    <li>If two people send the same business, the first form in gets the credit.</li>
+    <li>I work with one business per industry in each market. If their spot is taken, I can't take them on.</li>
+    <li>Any business owner in the United States.</li>
   </ul>
 </section>
 
@@ -40,26 +40,15 @@
       <label>Your phone<input name="referrer_phone" type="tel" autocomplete="tel" required maxlength="40"></label>
     </fieldset>
     <fieldset>
-      <legend>The shop you're sending</legend>
-      <label>Shop name<input name="shop_name" type="text" autocomplete="off" required maxlength="160"></label>
+      <legend>The business you're sending</legend>
+      <label>Business name<input name="business_name" type="text" autocomplete="off" required maxlength="160"></label>
       <label>Owner's name<input name="owner_name" type="text" autocomplete="off" required maxlength="120"></label>
       <label>Owner's phone<input name="owner_phone" type="tel" autocomplete="off" required maxlength="40"></label>
       <label><span>Owner's email <span class="opt">(optional)</span></span><input name="owner_email" type="email" autocomplete="off" maxlength="200"></label>
-      <label>City and state<input name="shop_city_state" type="text" autocomplete="off" required maxlength="120" placeholder="Tampa, FL"></label>
-      <label>What they do
-        <select name="shop_type" required>
-          <option value="">Pick one</option>
-          <option>Wraps</option>
-          <option>PPF</option>
-          <option>Window tint</option>
-          <option>Auto glass</option>
-          <option>Detailing</option>
-          <option>More than one of these</option>
-          <option>Something else</option>
-        </select>
-      </label>
+      <label>What kind of business?<input name="business_type" type="text" autocomplete="off" required maxlength="120" placeholder="Roofing, HVAC, med spa, auto shop..."></label>
+      <label>City and state<input name="city_state" type="text" autocomplete="off" required maxlength="120" placeholder="Tampa, FL"></label>
       <label>Do they know you're sending them?
-        <select name="shop_knows" required>
+        <select name="knows_about_it" required>
           <option value="">Pick one</option>
           <option>Yes, they're expecting my call</option>
           <option>Not yet. Mention my name.</option>
@@ -70,7 +59,8 @@
     </fieldset>
     <div class="ref-hp" aria-hidden="true"><label>Leave this empty<input name="company_website" type="text" tabindex="-1" autocomplete="off"></label></div>
     <button type="submit">Send referral</button>
-    <p class="ref-status" role="status" aria-live="polite" data-sent-text="Got it. I'll reach out to them and keep you posted." data-error-text="That didn't send. Try again, or email the details to izaiah@torqcrm.com." data-invalid-text="A few fields are missing. Fill them in, then send it again."></p>
+    <p class="ref-status" role="status" aria-live="polite" data-sent-text="Got it. I'll reach out to them and keep you posted." data-error-text="That didn't send. Email the details to izaiah@torqcrm.com instead." data-invalid-text="A few fields are missing. Fill them in, then send it again."></p>
+    <p class="ref-fallback" hidden><a class="ref-cta" href="mailto:izaiah@torqcrm.com?subject=Referral">Email this referral (already filled in)</a></p>
   </form>
   <p class="ref-alt">Rather email? <a href="mailto:izaiah@torqcrm.com?subject=Referral">izaiah@torqcrm.com</a></p>
 </section>

@@ -74,7 +74,7 @@ const REFERRAL_CSS = `.ref section{padding:0 var(--gutter)}
 .ref-hero{padding:var(--s-6) 0 0 !important}
 .ref-panel{position:relative;overflow:hidden;isolation:isolate;width:var(--panel-w);background:var(--surface);padding:var(--pad-panel-y) var(--pad-panel-x) var(--pad-panel-y) var(--gutter);display:flex;flex-direction:column;gap:var(--s-4)}
 .ref-panel svg{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;stroke:var(--hairline)}
-.ref-panel h1{font-size:var(--fs-h1);line-height:var(--lh-h1);max-width:14ch}
+.ref-panel h1{font-size:var(--fs-h1);line-height:var(--lh-h1);max-width:18ch}
 .ref-eyebrow{color:var(--accent);font-weight:500;letter-spacing:var(--track-label);text-transform:uppercase}
 .ref-lead{font-size:var(--fs-lead);line-height:var(--lh-lead)}
 .ref-cta{display:inline-flex;align-items:center;min-height:52px;padding:0 var(--s-5);background:var(--accent);color:var(--on-accent);font-weight:600;text-decoration:none;border-radius:var(--r-control);transition:transform var(--t-feedback) var(--ease)}

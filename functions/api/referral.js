@@ -11,7 +11,7 @@
 
 const REQUIRED = [
   'referrer_name', 'referrer_email', 'referrer_phone',
-  'shop_name', 'owner_name', 'owner_phone', 'shop_city_state', 'shop_type', 'shop_knows'
+  'business_name', 'owner_name', 'owner_phone', 'business_type', 'city_state', 'knows_about_it'
 ];
 const OPTIONAL = ['owner_email', 'notes'];
 const MAX = 2000;
@@ -39,7 +39,7 @@ export async function onRequestPost({ request, env }) {
   if (missing.length || badEmail) return reply(false, 422);
 
   if (!env.REFERRAL_WEBHOOK_URL) {
-    console.error('REFERRAL_WEBHOOK_URL is not set: referral not sent', fields.shop_name);
+    console.error('REFERRAL_WEBHOOK_URL is not set: referral not sent', fields.business_name);
     return reply(false, 503);
   }
 

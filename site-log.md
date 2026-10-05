@@ -92,3 +92,7 @@ START LINE (derived from the 2026-10-04 session, not typed by the owner):
             (mode-only diffs + ._ files that would upload with dist/). Local test with a mock webhook:
             valid/missing/honeypot/no-JS all correct. mobile-qa /referrals 8/8 pass. Copy drafted by
             Claude, awaiting owner approval; production waits on his go + one real test lead in GHL.
+2026-10-05  Referral page generalized to any business owner (owner's ask), fields renamed
+            (business_name, business_type, city_state, knows_about_it). If the send fails, the form
+            shows a pre-filled mailto to izaiah@torqcrm.com so no referral is lost while
+            REFERRAL_WEBHOOK_URL is unset. mobile-qa 8/8 pass. Owner's go: "put it as a live page".
