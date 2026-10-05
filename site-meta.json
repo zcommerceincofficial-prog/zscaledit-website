@@ -58,6 +58,12 @@
       "description": "The terms for using the Kairo website and services. Questions about them? Email izaiah@torqcrm.com.",
       "ogImageAlt": "The Kairo logo",
       "crumb": "Terms"
+    },
+    "referrals": {
+      "title": "Referral Program: Earn 20% for 3 Months | Kairo",
+      "description": "Know a wrap, PPF, tint, glass or detail shop that wants more booked jobs? Send them to Kairo and earn 20% of their fee for 3 months. Send a referral.",
+      "ogImageAlt": "The Kairo logo",
+      "crumb": "Referrals"
     }
   }
 }
