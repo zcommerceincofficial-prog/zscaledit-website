@@ -18,7 +18,7 @@
  *      Page fixes that are wiring, not design, happen here:
  *        - the logo points at a 2x WebP instead of the 271 KB PNG
  *        - How it works: step headings h3 -> h2 (no skipped heading level, same look)
- *        - Home: the founder frame shows wiring/founder.webp (round Instagram photo) with an
+ *        - Home: the founder frame shows wiring/founder.webp (4:5 studio headshot) with an
  *          Instagram link; without that file the frame is left out, never the [CONFIRM] placeholder
  *        - Book: the GHL calendar embed goes into #booking-widget
  *   4. Build Privacy and Terms from legal/*.body.html, and Referrals from
@@ -261,7 +261,7 @@ function addReferralLink(b) {
 
 const FOUNDER_FIGURE = `<div style="flex: 0 1 28rem; display: flex; justify-content: center; margin-left: auto; padding: 0 var(--s-6) 0 var(--gutter);">
       <figure style="width: 100%; margin: 0; display: flex; flex-direction: column; align-items: center; gap: var(--s-2);">
-        <img src="/founder.webp" width="768" height="768" alt="Izaiah Jackson, founder of Kairo" loading="lazy" decoding="async" style="display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; border-radius: 50%; border: 1px solid var(--hairline);">
+        <img src="/founder.webp" width="896" height="1120" alt="Izaiah Jackson, founder of Kairo" loading="lazy" decoding="async" style="display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--r-control); border: 1px solid var(--hairline);">
         <figcaption style="font-size: var(--fs-label); line-height: var(--lh-label); color: var(--muted);"><a href="${INSTAGRAM}" target="_blank" rel="me noopener" style="display: inline-flex; align-items: center; gap: var(--s-2); min-height: 44px; color: var(--ink);"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg>@izaiahz_ on Instagram</a></figcaption>
       </figure>
     </div>`;
@@ -276,7 +276,7 @@ function fixBody(file, body) {
       // the photo column is the second child of the founder section: drop it whole
       b = b.replace(/(<section[^>]*data-screen-label="07 Founder"[\s\S]*?)<div[^>]*>\s*<figure[\s\S]*?<\/figure>\s*<\/div>/, '$1');
     } else {
-      // the export's 4:5 placeholder frame becomes the round Instagram photo with a link under it
+      // the export's 4:5 placeholder frame becomes the 4:5 studio headshot with the Instagram link under it
       b = b.replace(/(<section[^>]*data-screen-label="07 Founder"[\s\S]*?)<div[^>]*>\s*<figure[\s\S]*?<\/figure>\s*<\/div>/, '$1' + FOUNDER_FIGURE);
     }
     if (b === before) die('Could not find the founder photo frame on the home page.');
